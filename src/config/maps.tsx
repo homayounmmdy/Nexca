@@ -1,4 +1,8 @@
-export const AF_MAP_DATA = [
+interface MapDataType {
+   secid: string;
+   name: string;
+}
+export const AF_MAP_DATA: MapDataType[] = [
    {
       secid: '1',
       name: 'Badakhshan',
@@ -137,7 +141,7 @@ export const AF_MAP_DATA = [
    },
 ];
 
-export const AL_MAP_DATA = [
+export const AL_MAP_DATA: MapDataType[] = [
    {
       secid: '1',
       name: 'Berat',
@@ -188,7 +192,7 @@ export const AL_MAP_DATA = [
    },
 ];
 
-export const DZ_MAP_DATA = [
+export const DZ_MAP_DATA: MapDataType[] = [
    {
       secid: '1',
       name: 'Adrar',
@@ -423,7 +427,7 @@ export const DZ_MAP_DATA = [
    },
 ];
 
-export const AD_MAP_DATA = [
+export const AD_MAP_DATA: MapDataType[] = [
    {
       secid: '2',
       name: 'Canillo',
@@ -454,7 +458,7 @@ export const AD_MAP_DATA = [
    },
 ];
 
-export const SE_MAP_DATA = [
+export const SE_MAP_DATA: MapDataType[] = [
    {
       secid: '1',
       name: 'Stockholm',
@@ -541,7 +545,7 @@ export const SE_MAP_DATA = [
    },
 ];
 
-export const DE_MAP_DATA = [
+export const DE_MAP_DATA: MapDataType[] = [
    {
       secid: '1',
       name: 'Baden-Württemberg',
@@ -608,7 +612,7 @@ export const DE_MAP_DATA = [
    },
 ];
 
-export const GL_MAP_DATA = [
+export const GL_MAP_DATA: MapDataType[] = [
    {
       secid: '1',
       name: 'Avannaata',
@@ -631,7 +635,7 @@ export const GL_MAP_DATA = [
    },
 ];
 
-export const IS_MAP_DATA = [
+export const IS_MAP_DATA: MapDataType[] = [
    {
       secid: '1',
       name: 'Capital Region',
