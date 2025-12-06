@@ -12,7 +12,11 @@ import {
    VALENTINETHEME,
 } from './Constants';
 
-export const ThemesConfig = [
+interface ThemesConfigType {
+   name: string;
+   activate: boolean;
+}
+export const ThemesConfig: ThemesConfigType[] = [
    { name: LIGHTTHEME, activate: true },
    { name: DARKTHEME, activate: true },
    { name: CUPCAKETHEME, activate: false },
@@ -20,7 +24,6 @@ export const ThemesConfig = [
    { name: EMERALADTHEME, activate: false },
    { name: VALENTINETHEME, activate: true },
    { name: CORPORATETHEME, activate: false },
-   { name: VALENTINETHEME, activate: false },
    { name: FORESTTHEME, activate: true },
    { name: LUXURYTHEME, activate: false },
    { name: COFFETHEME, activate: true },
