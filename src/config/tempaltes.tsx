@@ -1,4 +1,9 @@
-export const templatesData = [
+interface templatesDataType {
+   secid: string;
+   name: string;
+}
+
+export const templatesData: templatesDataType[] = [
    {
       secid: '1',
       name: 'default',
