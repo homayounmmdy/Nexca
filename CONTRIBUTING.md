@@ -4,7 +4,7 @@ Welcome to **Nexca**! We appreciate your interest in contributing to our project
 
 ### 1. Explore the Repository 🧭
 
-Start by visiting the [Nexca repository](https://github.com/homayunmmdy/Nexca). Look through the README, documentation, and open issues to get familiar with the project. You'll find areas where we need help, such as new features, bug fixes, or improving documentation.
+Start by visiting the [Nexca repository](https://github.com/homayounmmdy/Nexca). Look through the README, documentation, and open issues to get familiar with the project. You'll find areas where we need help, such as new features, bug fixes, or improving documentation.
 
 ### 2. Choose an Issue 🎯
 
@@ -74,4 +74,4 @@ After approval, your changes will be merged into the main branch. Congrats, you'
 
 Happy coding, and thank you for helping Nexca grow! 😊
 
-For more information, check out our [Nexca repository](https://github.com/homayunmmdy/Nexca).
+For more information, check out our [Nexca repository](https://github.com/homayounmmdy/Nexca).

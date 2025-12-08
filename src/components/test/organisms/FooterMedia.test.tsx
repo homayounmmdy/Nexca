@@ -9,15 +9,15 @@ describe('FooterMedia', () => {
       // Check if all social media links are rendered with correct hrefs
       const socialLinks = [
          {
-            href: 'https://github.com/homayunmmdy',
+            href: 'https://github.com/homayounmmdy',
             ariaLabel: 'Link of Github',
          },
          {
-            href: 'https://dev.to/homayunmmdy',
+            href: 'https://dev.to/homayounmmdy',
             ariaLabel: 'Link of Dev community',
          },
          {
-            href: 'https://www.linkedin.com/in/homayunmmdy',
+            href: 'https://www.linkedin.com/in/homayounmmdy',
             ariaLabel: 'Link of Linkedin',
          },
       ];

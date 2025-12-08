@@ -35,7 +35,7 @@ const CommentsCash: CommentsCashType[] = [
       _id: '6641b06d0caf3407cd78b621',
       postId: '66a1b06d0caf3407cd78b621',
       name: 'homayoun',
-      email: 'homayunmmdy@gmail.com',
+      email: 'homayoun763@gmail.com',
       message: 'great article',
       createdAt: '2024-05-13T06:17:17.938Z',
       updatedAt: '2024-05-13T06:17:17.938Z',

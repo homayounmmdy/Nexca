@@ -30,17 +30,17 @@ export default FooterMedia;
 const FooterMediaData = [
    {
       title: 'Github',
-      href: 'https://github.com/homayunmmdy',
+      href: 'https://github.com/homayounmmdy',
       icon: LuGithub,
    },
    {
       title: 'Dev community',
-      href: 'https://dev.to/homayunmmdy',
+      href: 'https://dev.to/homayounmmdy',
       icon: FaDev,
    },
    {
       title: 'Linkedin',
-      href: 'https://www.linkedin.com/in/homayunmmdy',
+      href: 'https://www.linkedin.com/in/homayounmmdy',
       icon: FaLinkedinIn,
    },
 ];

@@ -29,7 +29,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/homayunmmdy/nexca.git
+   git clone https://github.com/homayounmmdy/nexca.git
    ```
 2. **Navigate to the project directory:**
 
@@ -70,7 +70,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Additional Information
 
-- If you encounter any issues, feel free to open an issue on the [GitHub Issues page](https://github.com/homayunmmdy/nexca/issues).
+- If you encounter any issues, feel free to open an issue on the [GitHub Issues page](https://github.com/homayounmmdy/nexca/issues).
 
 ---
 

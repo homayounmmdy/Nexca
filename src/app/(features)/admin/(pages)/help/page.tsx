@@ -1,14 +1,13 @@
-import React from 'react';
+import RouteConfig from '@/config/RouteConfig';
 import SiteConfig from '@/config/site';
 import Link from 'next/link';
 import {
-   FiMail,
-   FiMessageCircle,
+   FiArrowRight,
    FiBookOpen,
    FiHelpCircle,
-   FiArrowRight,
+   FiMail,
+   FiMessageCircle,
 } from 'react-icons/fi';
-import RouteConfig from '@/config/RouteConfig';
 
 export default function HelpPage() {
    return (
@@ -144,10 +143,10 @@ export default function HelpPage() {
                            <div>
                               <p className="font-medium">Technical Support</p>
                               <Link
-                                 href="mailto:homayunmmdy@gmail.com"
+                                 href="mailto:homayoun763@gmail.com"
                                  className="text-indigo-600 transition-colors hover:text-indigo-800"
                               >
-                                 homayunmmdy@gmail.com
+                                 homayoun763@gmail.com
                               </Link>
                            </div>
                         </div>
