@@ -1,6 +1,7 @@
 import RouteConfig from '@/config/RouteConfig';
 import Link from 'next/link';
 import React from 'react';
+import CalloutBox from '@/app/(features)/admin/(pages)/help/components/CalloutBox';
 
 const SectionsHelpAdminPage: React.FC = () => {
    return (
@@ -24,11 +25,10 @@ const SectionsHelpAdminPage: React.FC = () => {
                      <span className="font-semibold">sections</span>, which play
                      a crucial role in organizing and distributing posts.
                   </p>
-
-                  <div className="mb-8 rounded-lg border-l-4 border-indigo-500 bg-base-200 p-6">
-                     <h2 className="mb-4 text-2xl font-bold">
-                        What Are Sections in Nexca?
-                     </h2>
+                  <CalloutBox
+                     className="mb-8"
+                     title="What Are Sections in Nexca?"
+                  >
                      <p className="">
                         Sections in Nexca are designated areas where posts are
                         categorized and displayed. When you create a post, you
@@ -42,7 +42,7 @@ const SectionsHelpAdminPage: React.FC = () => {
                         &quot;Announcements&quot; or &quot;Product
                         Updates.&quot;
                      </p>
-                  </div>
+                  </CalloutBox>
 
                   <div className="grid gap-8 md:grid-cols-2">
                      <div className="rounded-lg border border-base-200 bg-base-200 p-6 shadow-sm">
@@ -78,10 +78,10 @@ const SectionsHelpAdminPage: React.FC = () => {
                   </h2>
 
                   <div className="space-y-6">
-                     <div className="rounded-lg border-l-4 border-amber-500 bg-base-200 p-6">
-                        <h3 className="mb-2 text-lg font-semibold text-amber-800">
-                           Why Can&apos;t I Create a New Section?
-                        </h3>
+                     <CalloutBox
+                        color="amber"
+                        title="Why Can't I Create a New Section?"
+                     >
                         <p className="">
                            Only the Master Editor can create new sections
                            because each section must first be coded and styled.
@@ -93,12 +93,8 @@ const SectionsHelpAdminPage: React.FC = () => {
                            </li>
                            <li>Maintains seamless user experience</li>
                         </ul>
-                     </div>
-
-                     <div className="rounded-lg border-l-4 border-rose-500 bg-base-200 p-6">
-                        <h3 className="mb-2 text-lg font-semibold text-rose-800">
-                           Why Can&apos;t I Change a Section&apos;s ID?
-                        </h3>
+                     </CalloutBox>
+                     <CalloutBox title="Why Can't I Change a Section's ID?">
                         <p className="">
                            Section IDs are unique identifiers that link sections
                            to their corresponding code. Changing a
@@ -106,13 +102,11 @@ const SectionsHelpAdminPage: React.FC = () => {
                            <span className="font-medium">sync issues</span>,
                            resulting in lost posts.
                         </p>
-                     </div>
-
-                     <div className="rounded-lg border-l-4 border-emerald-500 bg-base-200 p-6">
-                        <h3 className="mb-2 text-lg font-semibold text-emerald-800">
-                           Why Can&apos;t I See Some Sections in the Admin
-                           Panel?
-                        </h3>
+                     </CalloutBox>
+                     <CalloutBox
+                        title="Why Can't I See Some Sections in the Admin
+                           Panel?"
+                     >
                         <p className="">
                            Some sections are{' '}
                            <span className="font-medium">
@@ -123,7 +117,7 @@ const SectionsHelpAdminPage: React.FC = () => {
                            &quot;Main&quot; section without requiring manual
                            intervention.
                         </p>
-                     </div>
+                     </CalloutBox>
                   </div>
                </section>
 
