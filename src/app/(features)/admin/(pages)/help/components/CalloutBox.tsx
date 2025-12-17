@@ -14,6 +14,7 @@ const CalloutBox = ({
 }: Props) => {
    return (
       <div
+         data-testid={'callout-box'}
          className={`${className}  rounded-lg border-l-4 border-${color}-500 bg-base-200 p-4 md:p-6`}
       >
          <h2 className={`mb-4 text-2xl font-bold text-${color}-800`}>
