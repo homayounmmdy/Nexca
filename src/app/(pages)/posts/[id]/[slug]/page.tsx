@@ -10,7 +10,7 @@ import React, { useEffect } from 'react';
 import NotFound from '../../../[...not_found]/not-found';
 import NewsBody from '../components/NewsBody';
 import PostMeta from '../components/PostMeta';
-import PostSeclton from '../PostSkelton';
+import SinglePostLoadingSkeleton from '../loading';
 
 const slugify = (title: string) =>
    title
@@ -34,7 +34,7 @@ const Post: React.FC = () => {
    }, [post, slug, router]);
 
    if (isLoading) {
-      return <PostSeclton />;
+      return <SinglePostLoadingSkeleton />;
    }
 
    if (isError || !post || !post._id) {

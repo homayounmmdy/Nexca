@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PostSkelton: React.FC = () => {
+const SinglePostLoadingSkeleton: React.FC = () => {
    return (
       <>
          <div className="flex flex-col ">
@@ -41,4 +41,4 @@ const PostSkelton: React.FC = () => {
    );
 };
 
-export default PostSkelton;
+export default SinglePostLoadingSkeleton;

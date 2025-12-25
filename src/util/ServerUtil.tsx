@@ -25,7 +25,7 @@ export const FetchDataForEditPage = async (apiUrl: string, id: string) => {
    return data?.document || {};
 };
 
-const slugify = (title: string) =>
+export const slugify = (title: string) =>
    title
       .toLowerCase()
       .replace(/\s+/g, '-')
