@@ -2,16 +2,58 @@ import { postLinkGenerator } from '@/util/ServerUtil';
 import Image from 'next/image';
 import Link from 'next/link';
 
+/**
+ * Props for the PostItem component.
+ */
 interface PostItemType {
+   /** Unique identifier for the post. */
    _id: string;
+   /** Title of the post, displayed prominently. */
    title: string;
+   /** Brief description of the post, truncated to 3 lines. */
    description: string;
+   /** URL to the post's featured image. Falls back to a default logo if missing. */
    imgurl: string;
+   /** ISO-formatted creation date string (optional). Used in the footer. */
    createdAt?: string;
+   /** Custom link for the post (optional). If omitted, a link is auto-generated. */
    link?: string;
+   /** Author name displayed in the footer (optional). Defaults to 'unknown'. */
    author?: string;
+   /**
+    * Controls visibility of the post footer.
+    * - If `true`: footer is shown.
+    * - If `false` or omitted: footer is hidden.
+    * @default false
+    */
    postFooter?: boolean;
 }
+
+/**
+ * A reusable card component for displaying a single post.
+ *
+ * Features:
+ * - Responsive image with lazy loading
+ * - Auto-generated or custom post link
+ * - Hover scaling effect on larger screens
+ * - Optional footer displaying creation date and author
+ *
+ *
+ * @param {Object} props - The component props.
+ * @param {PostItemType} props.post - Post data to render.
+ * @returns {JSX.Element} The rendered post card.
+ *
+ * @example
+ * <PostItem post={{
+ *   _id: '123',
+ *   title: 'Sample Post',
+ *   description: 'This is a sample post.',
+ *   imgurl: '/image.jpg',
+ *   postFooter: true,
+ *   createdAt: '2023-10-05T12:00:00Z',
+ *   author: 'Jane Doe'
+ * }} />
+ */
 
 const PostItem = ({ post }: { post: PostItemType }) => {
    const postLink = post.link
