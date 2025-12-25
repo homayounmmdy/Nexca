@@ -1,8 +1,8 @@
 'use client';
 import useGetMapContent from '@/app/(features)/maps/hooks/useGetMapContent';
 import { ErrorText, Spinner } from '@/components/atoms';
+import { PostItem } from '@/components/posts';
 import { MapsCashType } from '@/types/CashTypes';
-import Image from 'next/image';
 
 interface Props {
    key: string;
@@ -17,29 +17,17 @@ const MapContent = ({ key, provinceID, countryID = 1 }: Props) => {
       return <Spinner />;
    }
    return (
-      <div className="grid md:grid-cols-2 gap-4 mt-6">
+      <div className="grid md:grid-cols-2 gap-4 my-6">
          {data.length > 0 ? (
             data?.map((content: MapsCashType) => (
-               <div
+               <PostItem
+                  post={{
+                     ...content,
+                     disableLinks: true,
+                     disableHoverEffect: true,
+                  }}
                   key={content._id}
-                  className="card bg-base-100 w-full shadow-sm"
-               >
-                  <figure>
-                     <Image
-                        width={662.172}
-                        height={372.469}
-                        src={content.imgurl}
-                        title={content.title}
-                        alt={content.title}
-                     />
-                  </figure>
-                  <div className="card-body">
-                     <h2 className="card-title line-clamp-2">
-                        {content.title}
-                     </h2>
-                     <p className="line-clamp-3">{content.description}</p>
-                  </div>
-               </div>
+               />
             ))
          ) : (
             <ErrorText>No Content found for this province.</ErrorText>
