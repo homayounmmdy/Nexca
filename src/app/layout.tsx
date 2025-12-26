@@ -4,6 +4,7 @@ import MainProvider from '@/providers/MainProvider';
 import { Metadata } from 'next';
 import { Libre_Franklin } from 'next/font/google';
 import './globals.css';
+import PWAInstallThankYou from '@/components/organisms/PWAInstallThankYou';
 
 const libre_Franklin = Libre_Franklin({ subsets: ['latin'] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
          <html lang="en" data-theme="light">
             <body className={libre_Franklin.className}>
                <SkipToMain />
+               <PWAInstallThankYou />
                <Header />
                <main id="main" className="mt-[80px]">
                   {children}
