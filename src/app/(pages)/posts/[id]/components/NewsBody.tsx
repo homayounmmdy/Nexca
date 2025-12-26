@@ -19,7 +19,7 @@ const NewsBody = ({ post }: { post: any }) => {
    const text = `${post?.title}. ${post?.description}`;
    const PostBody = DOMPurify.sanitize(post.body);
 
-   const initalData = {
+   const initialData = {
       postId: post._id,
       name: '',
       email: '',
@@ -90,7 +90,7 @@ const NewsBody = ({ post }: { post: any }) => {
          <div className="mb-3">
             <Form
                buttonText="Comment"
-               initalData={initalData}
+               initialData={initialData}
                API={COMMENTS_API_URL}
             />
          </div>
