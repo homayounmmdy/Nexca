@@ -71,7 +71,7 @@ export type FallbackProps = {
 
 export type ShareFormType = {
    buttonText: string;
-   initalData: any;
+   initialData: any;
    API: string;
 };
 

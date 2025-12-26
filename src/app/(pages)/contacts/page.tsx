@@ -6,7 +6,7 @@ import ContactsBg from './components/ContactsBg';
 import ContactsInfo from './components/ContactsInfo';
 
 const ContactsPage: React.FC = () => {
-   const initalData = { name: '', email: '', message: '' };
+   const initialData = { name: '', email: '', message: '' };
    return (
       <>
          <section className="relative z-10 overflow-hidden py-12 sm:py-20 lg:py-[120px]">
@@ -16,7 +16,7 @@ const ContactsPage: React.FC = () => {
                      <div className="relative rounded-lg p-8 shadow-2xl sm:p-12">
                         <Form
                            buttonText="send"
-                           initalData={initalData}
+                           initialData={initialData}
                            API={CONTACTS_API_URL}
                         />
                         <ContactsBg />

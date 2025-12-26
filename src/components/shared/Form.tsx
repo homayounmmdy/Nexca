@@ -11,7 +11,7 @@ import { usePathname } from 'next/navigation';
 /**
  * @typedef {Object} Props - The properties passed to the Form component.
  * @property {string} buttonText - The text to display on the submit button.
- * @property {Object} initalData - The initial data for the form fields.
+ * @property {Object} initialData - The initial data for the form fields.
  * @property {string} API - The API endpoint to submit the form data to.
  */
 
@@ -23,10 +23,10 @@ import { usePathname } from 'next/navigation';
  * @returns {JSX.Element} - The rendered form component.
  */
 
-const Form = ({ buttonText, initalData, API }: ShareFormType) => {
+const Form = ({ buttonText, initialData, API }: ShareFormType) => {
    const router = useRouter();
    const pathname = usePathname();
-   const [formData, setFormData] = useState(initalData);
+   const [formData, setFormData] = useState(initialData);
 
    const handler = new FormHandler(setFormData, API, router);
 
@@ -35,7 +35,7 @@ const Form = ({ buttonText, initalData, API }: ShareFormType) => {
       try {
          await handler.submit(e, formData, undefined, pathname);
          // Reset the form data after successful submission
-         setFormData(initalData);
+         setFormData(initialData);
          router.refresh();
       } catch (error) {
          console.error('Form submission failed:', error);
