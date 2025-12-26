@@ -73,6 +73,7 @@ export type ShareFormType = {
    buttonText: string;
    initialData: any;
    API: string;
+   message?: { create?: string; update?: string };
 };
 
 export type adminPagesType = {

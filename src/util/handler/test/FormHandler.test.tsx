@@ -77,7 +77,7 @@ describe('FormHandler', () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ formData }),
          });
-         expect(toast.success).toHaveBeenCalledWith('Item added successfully');
+         expect(toast.success).toHaveBeenCalledWith('Submitted successfully');
          expect(routerMock.refresh).toHaveBeenCalled();
          expect(routerMock.push).toHaveBeenCalledWith('/admin');
       });
@@ -130,7 +130,7 @@ describe('FormHandler', () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ formData }),
          });
-         expect(toast.success).toHaveBeenCalledWith('Item added successfully');
+         expect(toast.success).toHaveBeenCalledWith('Submitted successfully');
          expect(routerMock.refresh).toHaveBeenCalled();
          expect(routerMock.push).toHaveBeenCalledWith(customRoute);
       });
@@ -146,9 +146,113 @@ describe('FormHandler', () => {
          });
 
          await expect(formHandler.submit(event, formData)).rejects.toThrow(
-            'Failed to create ticket'
+            'Failed to create'
          );
          expect(toast.error).toHaveBeenCalledWith('Something went wrong');
+      });
+
+      it('should use custom success message in create mode', async () => {
+         const event = {
+            preventDefault: vi.fn(),
+         } as unknown as React.FormEvent<HTMLFormElement>;
+         const formData = {
+            name: 'John',
+            email: 'john@example.com',
+            message: 'Hi!',
+         };
+         const customRoute = '/thank-you';
+         const customMessages = {
+            create: 'Thank you! Your message has been sent.',
+         };
+
+         global.fetch = vi.fn().mockResolvedValueOnce({ ok: true });
+
+         await formHandler.submit(
+            event,
+            formData,
+            undefined,
+            customRoute,
+            customMessages
+         );
+
+         expect(toast.success).toHaveBeenCalledWith(
+            'Thank you! Your message has been sent.'
+         );
+         expect(routerMock.push).toHaveBeenCalledWith(customRoute);
+      });
+
+      it('should use custom success message in edit mode', async () => {
+         const event = {
+            preventDefault: vi.fn(),
+         } as unknown as React.FormEvent<HTMLFormElement>;
+         const formData = { name: 'Updated Comment' };
+         const id = '456';
+         const customMessages = {
+            update: 'Your comment has been updated!',
+         };
+
+         global.fetch = vi.fn().mockResolvedValueOnce({ ok: true });
+
+         await formHandler.submit(
+            event,
+            formData,
+            id,
+            undefined,
+            customMessages
+         );
+
+         expect(toast.success).toHaveBeenCalledWith(
+            'Your comment has been updated!'
+         );
+      });
+
+      it('should fall back to default message if custom message is missing', async () => {
+         const event = {
+            preventDefault: vi.fn(),
+         } as unknown as React.FormEvent<HTMLFormElement>;
+         const formData = { title: 'New Post' };
+         // Only provide update message, but we're in CREATE mode
+         const customMessages = {
+            update: 'This should not be used',
+         };
+
+         global.fetch = vi.fn().mockResolvedValueOnce({ ok: true });
+
+         await formHandler.submit(
+            event,
+            formData,
+            undefined,
+            '/admin',
+            customMessages
+         );
+
+         // Should fall back to default create message
+         expect(toast.success).toHaveBeenCalledWith('Submitted successfully');
+      });
+
+      it('should fall back for update if custom update message is missing', async () => {
+         const event = {
+            preventDefault: vi.fn(),
+         } as unknown as React.FormEvent<HTMLFormElement>;
+         const formData = { title: 'Updated Post' };
+         const customMessages = {
+            create: 'This is for create only',
+         };
+
+         global.fetch = vi.fn().mockResolvedValueOnce({ ok: true });
+
+         await formHandler.submit(
+            event,
+            formData,
+            '789',
+            '/admin',
+            customMessages
+         );
+
+         // Should fall back to default update message
+         expect(toast.success).toHaveBeenCalledWith(
+            'Item updated successfully'
+         );
       });
    });
 

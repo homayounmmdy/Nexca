@@ -23,7 +23,7 @@ import { usePathname } from 'next/navigation';
  * @returns {JSX.Element} - The rendered form component.
  */
 
-const Form = ({ buttonText, initialData, API }: ShareFormType) => {
+const Form = ({ buttonText, initialData, API, message }: ShareFormType) => {
    const router = useRouter();
    const pathname = usePathname();
    const [formData, setFormData] = useState(initialData);
@@ -33,7 +33,7 @@ const Form = ({ buttonText, initialData, API }: ShareFormType) => {
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       try {
-         await handler.submit(e, formData, undefined, pathname);
+         await handler.submit(e, formData, undefined, pathname, message);
          // Reset the form data after successful submission
          setFormData(initialData);
          router.refresh();

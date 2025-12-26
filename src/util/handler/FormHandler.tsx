@@ -48,12 +48,14 @@ class FormHandler {
     * @param formData - Data to be submitted.
     * @param id - Optional ID to determine edit mode.
     * @param route - where redirect user after submit form.
+    * @param message - you can set custom message after update or create new things
     */
    async submit(
       e: React.FormEvent<HTMLFormElement>,
       formData: any,
       id?: string,
-      route?: string
+      route?: string,
+      message?: { create?: string; update?: string }
    ) {
       e.preventDefault();
       const EDITMODE = !id ? false : id !== 'new';
@@ -68,17 +70,19 @@ class FormHandler {
          body: JSON.stringify({ formData }),
       });
 
+      const successMsg = EDITMODE
+         ? (message?.update ?? 'Item updated successfully')
+         : (message?.create ?? 'Submitted successfully');
+
       if (res.ok) {
          this.loading = false;
-         toast.success(
-            EDITMODE ? 'Item updated successfully' : 'Item added successfully'
-         );
+         toast.success(successMsg);
          this.router.refresh();
          this.router.push(route ?? '/admin');
       } else {
          this.loading = false;
          toast.error('Something went wrong');
-         throw new Error(`Failed to ${EDITMODE ? 'update' : 'create'} ticket`);
+         throw new Error(`Failed to ${EDITMODE ? 'update' : 'create'}`);
       }
    }
 
