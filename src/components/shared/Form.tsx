@@ -3,7 +3,7 @@ import { Button, Input, Textarea } from '@/components/atoms';
 import { ShareFormType } from '@/types/entities';
 import FormHandler from '@/util/handler/FormHandler';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaRegMessage, FaUser } from 'react-icons/fa6';
 import { TfiEmail } from 'react-icons/tfi';
 import { usePathname } from 'next/navigation';
@@ -27,20 +27,59 @@ const Form = ({ buttonText, initialData, API, message }: ShareFormType) => {
    const router = useRouter();
    const pathname = usePathname();
    const [formData, setFormData] = useState(initialData);
+   const [canShowNotification, setCanShowNotification] = useState(false);
+
+   // Detect if running as installed PWA and has notification permission
+   useEffect(() => {
+      const checkPWAAndPermission = () => {
+         // Check if installed as PWA
+         const isStandalone =
+            window.matchMedia('(display-mode: standalone)').matches ||
+            (window.navigator as any).standalone === true;
+
+         // Check notification permission
+         const hasPermission = Notification.permission === 'granted';
+
+         // Only allow notification if both are true
+         setCanShowNotification(isStandalone && hasPermission);
+      };
+
+      // Run on mount
+      checkPWAAndPermission();
+   }, []);
 
    const handler = new FormHandler(setFormData, API, router);
+
+   const showLocalNotification = (msg: string) => {
+      if (!canShowNotification) return;
+
+      // Show local notification (no server push needed)
+      new Notification('New Message', {
+         body: msg,
+         icon: '/static/icons/192x192.png',
+         badge: '/static/icons/192x192.png',
+      });
+   };
 
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       try {
          await handler.submit(e, formData, undefined, pathname, message);
-         // Reset the form data after successful submission
+
+         // ✅ Show local notification only in PWA with permission
+         if (formData.message.trim()) {
+            showLocalNotification(formData.message);
+         }
+
          setFormData(initialData);
          router.refresh();
       } catch (error) {
          console.error('Form submission failed:', error);
       }
    };
+
+   // Optional: Request notification permission on first interaction (e.g., on form focus)
+   // But better to ask after user action (like submit), or in a separate prompt
 
    return (
       <>
