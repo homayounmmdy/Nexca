@@ -2,7 +2,7 @@ import React from 'react';
 import { FaCircleDot } from 'react-icons/fa6';
 import Link from 'next/link';
 import { PostsCashType } from '@/types/CashTypes';
-import { postLinkGenerator } from '@/util/ServerUtil';
+import { postLinkGenerator } from '../../../../util/ServerUtil';
 
 const BulletPost = ({ post }: { post: PostsCashType }) => {
    const postLink = postLinkGenerator(post._id, post.title);
@@ -12,13 +12,16 @@ const BulletPost = ({ post }: { post: PostsCashType }) => {
             <FaCircleDot
                className="h-full w-full text-indigo-700"
                size={28}
+               data-testid="link-icon"
                color="#4338CA"
+               aria-label="Bullet icon"
             />
          </div>
          <Link
             className="line-clamp-2 font-semibold group-hover:text-indigo-600"
             href={postLink}
             title={post.title}
+            data-testid="link"
          >
             {post.title}
          </Link>
