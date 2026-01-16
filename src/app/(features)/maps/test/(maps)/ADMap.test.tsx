@@ -5,10 +5,11 @@ import React from 'react';
 import ADMap from '../../(maps)/ADMap';
 
 describe('Andorra Map', () => {
+   const activeProvinceId = '7';
    it.each(AD_MAP_DATA)('all province should valid items', ({ secid }) => {
       const provinceID = `province-${secid}`;
 
-      render(<ADMap setActiveProvinceId={'7'} />);
+      render(<ADMap setActiveProvinceId={activeProvinceId} />);
 
       const id = screen.getByTestId(provinceID);
 
@@ -17,9 +18,9 @@ describe('Andorra Map', () => {
    });
 
    it('should have different style for active province', () => {
-      render(<ADMap setActiveProvinceId={'7'} />);
+      render(<ADMap setActiveProvinceId={activeProvinceId} />);
 
-      const id = screen.getByTestId('province-7');
+      const id = screen.getByTestId(`province-${activeProvinceId}`);
 
       expect(id).toHaveClass('activeProvince');
    });

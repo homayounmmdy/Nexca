@@ -5,10 +5,12 @@ import React from 'react';
 import ALMap from '../../(maps)/ALMap';
 
 describe('Albania Map', () => {
+   const activeProvinceId = '11';
+
    it.each(AL_MAP_DATA)('all province should valid items', ({ secid }) => {
       const provinceID = `province-${secid}`;
 
-      render(<ALMap setActiveProvinceId={'11'} />);
+      render(<ALMap setActiveProvinceId={activeProvinceId} />);
 
       const id = screen.getByTestId(provinceID);
 
@@ -17,9 +19,9 @@ describe('Albania Map', () => {
    });
 
    it('should have different style for active province', () => {
-      render(<ALMap setActiveProvinceId={'11'} />);
+      render(<ALMap setActiveProvinceId={activeProvinceId} />);
 
-      const id = screen.getByTestId('province-11');
+      const id = screen.getByTestId(`province-${activeProvinceId}`);
 
       expect(id).toHaveClass('activeProvince');
    });

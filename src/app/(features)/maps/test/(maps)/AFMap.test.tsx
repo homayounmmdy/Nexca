@@ -5,10 +5,12 @@ import React from 'react';
 import AFMap from '../../(maps)/AFMap';
 
 describe('Afghanistan Map', () => {
+   const activeProvinceId = '14';
+
    it.each(AF_MAP_DATA)('all province should valid items', ({ secid }) => {
       const provinceID = `province-${secid}`;
 
-      render(<AFMap setActiveProvinceId={'14'} />);
+      render(<AFMap setActiveProvinceId={activeProvinceId} />);
 
       const id = screen.getByTestId(provinceID);
 
@@ -17,9 +19,9 @@ describe('Afghanistan Map', () => {
    });
 
    it('should have different style for active province', () => {
-      render(<AFMap setActiveProvinceId={'14'} />);
+      render(<AFMap setActiveProvinceId={activeProvinceId} />);
 
-      const id = screen.getByTestId('province-14');
+      const id = screen.getByTestId(`province-${activeProvinceId}`);
 
       expect(id).toHaveClass('activeProvince');
    });
