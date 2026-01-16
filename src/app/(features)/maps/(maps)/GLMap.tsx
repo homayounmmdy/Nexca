@@ -1,7 +1,7 @@
-'use client';
 import MapProps from '../components/MapTypes';
 import MapWrapper from '../components/MapWrapper';
 import useMapInteraction from '../hooks/useMapInteraction';
+import React from 'react';
 
 const GlMap = ({ setActiveProvinceId }: MapProps) => {
    const MapRef = useMapInteraction(setActiveProvinceId);
@@ -52,6 +52,7 @@ const GlMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-4"
+               data-testid="province-4"
                fill-opacity="1"
             />
             <path
@@ -65,6 +66,7 @@ const GlMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-2"
+               data-testid="province-2"
                fill-opacity="1"
             />
             <path
@@ -78,6 +80,7 @@ const GlMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-3"
+               data-testid="province-3"
                fill-opacity="1"
             />
             <path
@@ -91,6 +94,7 @@ const GlMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-1"
+               data-testid="province-1"
                fill-opacity="1"
             />
             <path
@@ -104,6 +108,7 @@ const GlMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-5"
+               data-testid="province-5"
                fill-opacity="1"
             />
             <circle
