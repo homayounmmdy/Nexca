@@ -1,15 +1,6 @@
 'use client';
-import { ErrorText } from '@/components/atoms';
-import useFetch from '@/hooks/useFetch';
-import { PostsCashType } from '@/types/CashTypes';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { FiTrendingUp } from 'react-icons/fi';
 import LatestPosts from '../(components)/LatestPosts';
-import TabContent from '../(components)/TabContent';
 import TextHero from '../(components)/TextHero';
-import VerticalCard from '../(components)/VerticalCard';
-import { AI_HUB_categories } from '../data/aiHub';
 import AIHubMainSec from './components/AIHubMainSec';
 import EmailBox from '../(components)/EmailBox';
 import LatestVerticalPosts from './components/LatestVerticalPosts';
