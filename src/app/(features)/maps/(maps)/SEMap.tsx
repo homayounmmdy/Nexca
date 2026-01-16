@@ -1,7 +1,7 @@
-'use client';
+import React from 'react';
+import MapWrapper from '../components/MapWrapper';
 import useMapInteraction from '../hooks/useMapInteraction';
-import MapProps from './MapTypes';
-import MapWrapper from './MapWrapper';
+import MapProps from '../components/MapTypes';
 
 const SeMap = ({ setActiveProvinceId }: MapProps) => {
    const MapRef = useMapInteraction(setActiveProvinceId);
@@ -51,6 +51,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-18"
+               data-testid="province-18"
                fill-opacity="1"
             />
             <path
@@ -64,6 +65,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-3"
+               data-testid="province-3"
                fill-opacity="1"
             />
             <path
@@ -77,6 +79,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-16"
+               data-testid="province-16"
                fill-opacity="1"
             />
             <path
@@ -90,6 +93,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-15"
+               data-testid="province-15"
                fill-opacity="1"
             />
             <path
@@ -103,6 +107,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-7"
+               data-testid="province-7"
                fill-opacity="1"
             />
             <path
@@ -116,6 +121,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-21"
+               data-testid="province-21"
                fill-opacity="1"
             />
             <path
@@ -129,6 +135,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-20"
+               data-testid="province-20"
                fill-opacity="1"
             />
             <path
@@ -142,6 +149,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-19"
+               data-testid="province-19"
                fill-opacity="1"
             />
             <path
@@ -155,6 +163,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-8"
+               data-testid="province-8"
                fill-opacity="1"
             />
             <path
@@ -168,6 +177,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-14"
+               data-testid="province-14"
                fill-opacity="1"
             />
             <path
@@ -181,6 +191,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-6"
+               data-testid="province-6"
                fill-opacity="1"
             />
             <path
@@ -194,6 +205,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-5"
+               data-testid="province-5"
                fill-opacity="1"
             />
             <path
@@ -207,6 +219,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-4"
+               data-testid="province-4"
                fill-opacity="1"
             />
             <path
@@ -220,6 +233,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-13"
+               data-testid="province-13"
                fill-opacity="1"
             />
             <path
@@ -233,6 +247,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-2"
+               data-testid="province-2"
                fill-opacity="1"
             />
             <path
@@ -246,6 +261,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-1"
+               data-testid="province-1"
                fill-opacity="1"
             />
             <path
@@ -259,6 +275,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-12"
+               data-testid="province-12"
                fill-opacity="1"
             />
             <path
@@ -272,6 +289,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-17"
+               data-testid="province-17"
                fill-opacity="1"
             />
             <path
@@ -285,6 +303,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-11"
+               data-testid="province-11"
                fill-opacity="1"
             />
             <path
@@ -298,6 +317,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-10"
+               data-testid="province-10"
                fill-opacity="1"
             />
             <path
@@ -311,6 +331,7 @@ const SeMap = ({ setActiveProvinceId }: MapProps) => {
                stroke-linejoin="round"
                transform="matrix(0.8,0,0,0.8,0,0)"
                id="province-9"
+               data-testid="province-9"
                fill-opacity="1"
             />
             <circle
