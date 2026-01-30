@@ -34,21 +34,21 @@ export default meta;
 
 type Story = StoryObj<typeof ChatMessage>;
 
-export const Default = {};
+export const Default: Story = {};
 
-export const Primary = {
+export const Primary: Story = {
    args: {
       color: 'chat-bubble-primary',
    },
 };
 
-export const Secondary = {
+export const Secondary: Story = {
    args: {
       color: 'chat-bubble-secondary',
    },
 };
 
-export const ChatRight = {
+export const ChatRight: Story = {
    args: {
       color: 'chat-bubble-neutral',
       chatDirection: 'chat-end',
