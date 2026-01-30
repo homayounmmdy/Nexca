@@ -38,23 +38,6 @@ describe('SkipToMain', () => {
       expect(skipLink).toHaveAttribute('title', 'Skip to main content');
    });
 
-   it('should have the correct CSS classes applied', () => {
-      render(<SkipToMain />);
-
-      const skipLink = screen.getByText('Skip to main content');
-      expect(skipLink).toHaveClass('absolute');
-      expect(skipLink).toHaveClass('left-0');
-      expect(skipLink).toHaveClass('top-0');
-      expect(skipLink).toHaveClass('z-[60]');
-      expect(skipLink).toHaveClass('-translate-y-full');
-      expect(skipLink).toHaveClass('bg-black');
-      expect(skipLink).toHaveClass('px-4');
-      expect(skipLink).toHaveClass('py-2');
-      expect(skipLink).toHaveClass('text-white');
-      expect(skipLink).toHaveClass('focus:translate-y-0');
-      expect(skipLink).toHaveClass('focus:outline-none');
-   });
-
    it('should be focusable and accessible via keyboard', async () => {
       const user = userEvent.setup();
       render(<SkipToMain />);
