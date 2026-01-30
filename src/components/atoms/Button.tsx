@@ -41,7 +41,7 @@ import { ButtonType } from '@/types/FormFiledType';
 const Button: React.FC<ButtonType> = ({
    children,
    color = 'btn-primary',
-   className,
+   className = '',
    removeDefaultStyle = false,
    ...rest
 }) => {
