@@ -1,20 +1,23 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import LogoName from '../../atoms/LogoName';
+import SiteNameLink from '../../atoms/SiteNameLink';
 import SiteConfig from '../../../config/site';
 
-describe('LogoName component', () => {
+describe('SiteNameLink component', () => {
    it('should have right link for Logo', () => {
-      render(<LogoName />);
-      const link = screen.getByRole('link', { name: /logo link/i });
+      render(<SiteNameLink />);
+      const link = screen.getByRole('link');
 
       expect(link).toHaveAttribute('href', '/');
       expect(link).toHaveAttribute('title', SiteConfig.name);
-      expect(link).toHaveAttribute('aria-label', 'logo link');
+      expect(link).toHaveAttribute(
+         'aria-label',
+         `Return to ${SiteConfig.name} homepage`
+      );
    });
 
    it('should have right style', () => {
-      render(<LogoName />);
+      render(<SiteNameLink />);
       const p = screen.getByRole('paragraph');
 
       expect(p).toHaveClass('text-indigo-700');

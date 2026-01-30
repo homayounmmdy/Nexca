@@ -1,5 +1,5 @@
 'use client';
-import { Container, LogoName } from '@/components/atoms';
+import { Container, SiteNameLink } from '@/components/atoms';
 import { GitHubBtn, HamburgerIcon, ThemeBtn } from '@/components/molecules';
 import { DEV_MODE } from '@/config/Constants';
 import HeaderMenuConfig from '@/config/HeaderMenuConfig';
@@ -39,7 +39,7 @@ const Header = () => {
                <div className="navbar-start lg:w-[20%] xl:w-[30%]">
                   <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
                   <div className="flex items-center gap-2">
-                     <LogoName />
+                     <SiteNameLink />
                   </div>
                </div>
                <div className="navbar-center relative hidden lg:flex lg:w-[60%] xl:w-[50%] lg:justify-start">

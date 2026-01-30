@@ -7,7 +7,7 @@ export { default as Container } from './Container';
 export { default as ErrorText } from './ErrorText';
 export { default as MenuItem } from './MenuItem';
 export { default as Input } from './Input';
-export { default as LogoName } from './LogoName';
+export { default as SiteNameLink } from './SiteNameLink';
 export { default as PremiumBadge } from './PremiumBadge';
 export { default as SectionsTitle } from './SectionsTitle';
 export { default as SkipToMain } from './SkipToMain';

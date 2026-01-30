@@ -1,4 +1,4 @@
-import { Container, LogoName } from '@/components/atoms';
+import { Container, SiteNameLink } from '@/components/atoms';
 import SiteConfig from '@/config/site';
 import CopyRight from './CopyRight';
 import EmailListForm from './EmailListForm';
@@ -12,7 +12,7 @@ const Footer = () => {
             <Container>
                <div className="grid grid-cols-12 gap-x-5 gap-y-3 py-6">
                   <div className="relative col-span-full hidden xl:flex h-96 flex-col items-center justify-center gap-12 rounded-2xl border-2 border-indigo-600 bg-base-100 p-6 shadow-xl md:col-span-6 xl:col-span-3 xl:w-72">
-                     <LogoName />
+                     <SiteNameLink />
                      <p className="text-center">{SiteConfig.slogan}</p>
                      <FooterMedia />
                   </div>

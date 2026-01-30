@@ -1,5 +1,5 @@
 'use client';
-import { Button, LogoName } from '@/components/atoms';
+import { Button, SiteNameLink } from '@/components/atoms';
 import { HomeSettingBtn } from '@/components/molecules';
 import RouteConfig from '@/config/RouteConfig';
 import Link from 'next/link';
@@ -20,7 +20,7 @@ const Sidebar: React.FC = () => {
                href={RouteConfig.admin.base}
             >
                Admin
-               <LogoName />
+               <SiteNameLink />
             </Link>
             <div className="flex gap-1 sm:gap-3">
                <HomeSettingBtn />
