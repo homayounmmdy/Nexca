@@ -9,6 +9,7 @@ const meta = {
       children: 'Button',
       color: 'btn-primary',
       removeDefaultStyle: false,
+      disabled: false,
    },
    argTypes: {
       removeDefaultStyle: {
@@ -63,5 +64,11 @@ export const WithIcon: Story = {
    args: {
       color: 'btn-success',
       children: <IoArrowUpCircleSharp size={16} />,
+   },
+};
+
+export const Disable: Story = {
+   args: {
+      disabled: true,
    },
 };

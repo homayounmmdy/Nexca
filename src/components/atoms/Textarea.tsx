@@ -7,7 +7,7 @@ const Textarea: React.FC<TextareaType> = ({
    color,
    label,
    icon,
-   className,
+   className = '',
    ...rest
 }: TextareaType) => {
    return (
@@ -21,7 +21,7 @@ const Textarea: React.FC<TextareaType> = ({
                <textarea className={className} id={id} {...rest} />
             </label>
          ) : label ? (
-            <>
+            <div className="flex gap-2">
                <label className={style} htmlFor={id}>
                   {label}
                </label>
@@ -30,7 +30,7 @@ const Textarea: React.FC<TextareaType> = ({
                   id={id}
                   {...rest}
                />
-            </>
+            </div>
          ) : (
             <textarea
                className={`textarea textarea-bordered ${className} ${color}`}
