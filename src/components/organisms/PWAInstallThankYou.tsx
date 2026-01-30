@@ -6,14 +6,14 @@ const PWAInstallThankYou = () => {
    const [showThankYou, setShowThankYou] = useState(false);
 
    useEffect(() => {
-      let installPrompt: BeforeInstallPromptEvent | null = null;
+      let installPrompt = null;
 
       // Listen for the beforeinstallprompt event
       const handleBeforeInstallPrompt = (e: Event) => {
          // Prevent the mini-infobar from appearing on mobile
          e.preventDefault();
          // Stash the event so it can be triggered later
-         installPrompt = e as BeforeInstallPromptEvent;
+         installPrompt = e;
       };
 
       // Detect if already installed (standalone mode)
