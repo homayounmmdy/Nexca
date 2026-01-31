@@ -1,5 +1,24 @@
 import React from 'react';
 
+/**
+ * A reusable section title component with an optional decorative line.
+ *
+ * Renders a styled title badge with a customizable background color, followed
+ * by a horizontal line (enabled by default). Ideal for visually separating and
+ * labeling content sections in a clean, consistent way.
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.children - The title text to display.
+ * @param {string} [props.bg='bg-indigo-700'] - Tailwind CSS background color class for the title badge.
+ * @param {boolean} [props.line=true] - Whether to show the trailing horizontal line after the title.
+ * @param {string} [props.className=''] - Additional Tailwind CSS classes to apply to the title badge.
+ *
+ * @example
+ * <SectionsTitle bg="bg-emerald-600" line={false}>Features</SectionsTitle>
+ *
+ * @returns {JSX.Element} The styled section title component.
+ */
+
 interface SectionsTitleProps {
    children: string;
    bg?: string;
