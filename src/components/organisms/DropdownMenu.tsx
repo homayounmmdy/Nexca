@@ -2,7 +2,7 @@
 import { HeaderModeType } from '@/types/entities';
 import classNames from 'classnames';
 import { useState } from 'react';
-import { MenuItem } from '../atoms';
+import { HeaderNavLink } from '../atoms';
 import { MenuChildren } from '../molecules';
 
 type MenuItemType = {
@@ -41,7 +41,7 @@ const DropdownMenu = ({
             'mx-1 w-3/4': type === 'mobile',
          })}
       >
-         <MenuItem name={menuName} href={menuHref} type={type} />
+         <HeaderNavLink name={menuName} href={menuHref} type={type} />
          {type === 'desktop' ? (
             <MenuChildren loading={loading} type="desktop">
                {childrenItems}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import MenuItem from '../../atoms/MenuItem';
+import HeaderNavLink from '../../atoms/HeaderNavLink';
 import { usePathname } from 'next/navigation';
 
 // Mock next/navigation
@@ -18,7 +18,7 @@ vi.mock('next/link', () => ({
    ),
 }));
 
-describe('MenuItem', () => {
+describe('HeaderNavLink', () => {
    const defaultProps = {
       name: 'Home',
       href: '/home',
@@ -29,7 +29,7 @@ describe('MenuItem', () => {
    });
 
    it('renders with default props', () => {
-      render(<MenuItem {...defaultProps} />);
+      render(<HeaderNavLink {...defaultProps} />);
 
       const link = screen.getByRole('link', { name: 'Home' });
       expect(link).toBeInTheDocument();
@@ -39,7 +39,7 @@ describe('MenuItem', () => {
    });
 
    it('applies desktop classes by default', () => {
-      render(<MenuItem {...defaultProps} />);
+      render(<HeaderNavLink {...defaultProps} />);
 
       const link = screen.getByRole('link');
       expect(link).toHaveClass(
@@ -54,7 +54,7 @@ describe('MenuItem', () => {
    });
 
    it('applies mobile classes when type is mobile', () => {
-      render(<MenuItem {...defaultProps} type="mobile" />);
+      render(<HeaderNavLink {...defaultProps} type="mobile" />);
 
       const link = screen.getByRole('link');
       expect(link).toHaveClass(
@@ -72,7 +72,7 @@ describe('MenuItem', () => {
       it('applies active desktop classes when pathname matches href', () => {
          vi.mocked(usePathname).mockReturnValue('/home');
 
-         render(<MenuItem {...defaultProps} />);
+         render(<HeaderNavLink {...defaultProps} />);
 
          const link = screen.getByRole('link');
          expect(link).toHaveClass('bg-indigo-700', 'text-white');
@@ -81,7 +81,7 @@ describe('MenuItem', () => {
       it('does not apply active desktop classes when pathname does not match href', () => {
          vi.mocked(usePathname).mockReturnValue('/about');
 
-         render(<MenuItem {...defaultProps} />);
+         render(<HeaderNavLink {...defaultProps} />);
 
          const link = screen.getByRole('link');
          expect(link).not.toHaveClass('bg-indigo-700', 'text-white');
@@ -90,7 +90,7 @@ describe('MenuItem', () => {
       it('applies active mobile classes when pathname matches href', () => {
          vi.mocked(usePathname).mockReturnValue('/home');
 
-         render(<MenuItem {...defaultProps} type="mobile" />);
+         render(<HeaderNavLink {...defaultProps} type="mobile" />);
 
          const link = screen.getByRole('link');
          expect(link).toHaveClass('bg-indigo-700', 'text-white');
@@ -99,7 +99,7 @@ describe('MenuItem', () => {
       it('does not apply active mobile classes when pathname does not match href', () => {
          vi.mocked(usePathname).mockReturnValue('/about');
 
-         render(<MenuItem {...defaultProps} type="mobile" />);
+         render(<HeaderNavLink {...defaultProps} type="mobile" />);
 
          const link = screen.getByRole('link');
          expect(link).not.toHaveClass('bg-indigo-700', 'text-white');
@@ -110,7 +110,7 @@ describe('MenuItem', () => {
       it('has correct desktop classes when active', () => {
          vi.mocked(usePathname).mockReturnValue('/home');
 
-         render(<MenuItem {...defaultProps} />);
+         render(<HeaderNavLink {...defaultProps} />);
 
          const link = screen.getByRole('link');
          const expectedClasses = [
@@ -133,7 +133,7 @@ describe('MenuItem', () => {
       it('has correct mobile classes when active', () => {
          vi.mocked(usePathname).mockReturnValue('/home');
 
-         render(<MenuItem {...defaultProps} type="mobile" />);
+         render(<HeaderNavLink {...defaultProps} type="mobile" />);
 
          const link = screen.getByRole('link');
          const expectedClasses = [
@@ -160,7 +160,7 @@ describe('MenuItem', () => {
          href: '/about',
       };
 
-      render(<MenuItem {...props} />);
+      render(<HeaderNavLink {...props} />);
 
       const link = screen.getByRole('link', { name: 'About Us' });
       expect(link).toBeInTheDocument();
@@ -171,7 +171,7 @@ describe('MenuItem', () => {
    it('matches snapshot for desktop type', () => {
       vi.mocked(usePathname).mockReturnValue('/');
 
-      const { container } = render(<MenuItem {...defaultProps} />);
+      const { container } = render(<HeaderNavLink {...defaultProps} />);
       expect(container.firstChild).toMatchSnapshot();
    });
 
@@ -179,7 +179,7 @@ describe('MenuItem', () => {
       vi.mocked(usePathname).mockReturnValue('/');
 
       const { container } = render(
-         <MenuItem {...defaultProps} type="mobile" />
+         <HeaderNavLink {...defaultProps} type="mobile" />
       );
       expect(container.firstChild).toMatchSnapshot();
    });
@@ -187,7 +187,7 @@ describe('MenuItem', () => {
    it('matches snapshot for active desktop state', () => {
       vi.mocked(usePathname).mockReturnValue('/home');
 
-      const { container } = render(<MenuItem {...defaultProps} />);
+      const { container } = render(<HeaderNavLink {...defaultProps} />);
       expect(container.firstChild).toMatchSnapshot();
    });
 });

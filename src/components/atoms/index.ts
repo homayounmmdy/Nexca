@@ -5,7 +5,7 @@ export { default as Button } from './Button';
 export { default as ChatMessage } from './ChatMessage';
 export { default as Container } from './Container';
 export { default as ErrorText } from './ErrorText';
-export { default as MenuItem } from './MenuItem';
+export { default as HeaderNavLink } from './HeaderNavLink';
 export { default as Input } from './Input';
 export { default as SiteNameLink } from './SiteNameLink';
 export { default as PremiumBadge } from './PremiumBadge';

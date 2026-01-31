@@ -2,7 +2,7 @@
 import { GitHubBtn, MenuChildren } from '@/components/molecules';
 import { HeaderMenuConfigType } from '@/types/entities';
 import { useState } from 'react';
-import { MenuItem } from '../atoms';
+import { HeaderNavLink } from '../atoms';
 import MapMenu from './MapMenu';
 import ServicesMenu from './ServicesMenu';
 
@@ -23,7 +23,7 @@ const MobileMenu = ({ nav }: { nav: HeaderMenuConfigType[] }) => {
                      onClick={() => item.children && toggleItem(item.id)}
                      className="mx-1 w-3/4"
                   >
-                     <MenuItem
+                     <HeaderNavLink
                         name={item.name}
                         href={item.link}
                         type="mobile"

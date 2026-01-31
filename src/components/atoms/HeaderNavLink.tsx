@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { HeaderModeType } from '../../types/entities';
+import { HeaderModeType } from '@/types/entities';
 
 interface Props {
    name: string;
@@ -11,7 +11,7 @@ interface Props {
    type?: HeaderModeType;
 }
 
-const MenuItem = ({ name, href, type = 'desktop' }: Props) => {
+const HeaderNavLink = ({ name, href, type = 'desktop' }: Props) => {
    const pathname = usePathname();
    const DesktopClasses = classNames({
       'rounded-xl border-2 border-base-100 hover:bg-indigo-700 hover:text-white transition-colors ease-in-out': true,
@@ -33,4 +33,4 @@ const MenuItem = ({ name, href, type = 'desktop' }: Props) => {
    );
 };
 
-export default MenuItem;
+export default HeaderNavLink;
