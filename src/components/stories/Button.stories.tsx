@@ -5,6 +5,7 @@ import { IoArrowUpCircleSharp } from 'react-icons/io5';
 const meta = {
    title: 'Components/Atom/Button',
    component: Button,
+   tags: ['autodocs'],
    args: {
       children: 'Button',
       color: 'btn-primary',
@@ -12,16 +13,14 @@ const meta = {
       disabled: false,
    },
    argTypes: {
-      removeDefaultStyle: {
-         control: 'inline-radio',
-         options: [true, false],
-      },
       color: {
          control: 'select',
          options: [
             'btn-primary',
             'btn-secondary',
             'btn-neutral',
+            'btn-accent',
+            'btn-info',
             'btn-success',
             'btn-info',
             'btn-warning',
@@ -31,26 +30,42 @@ const meta = {
             'btn-link',
             'btn-null',
          ],
+         description:
+            'Predefined DaisyUI button style. Use `btn-null` to disable color styling.',
       },
+      removeDefaultStyle: {
+         control: 'boolean',
+         description: 'If true, skips the default `btn` class entirely.',
+         options: [true, false],
+      },
+      disabled: {
+         control: 'boolean',
+      },
+      onClick: { action: 'clicked' },
    },
 } satisfies Meta;
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = {};
-
+export const Primary: Story = {
+   args: {
+      children: 'Click me',
+      color: 'btn-primary',
+   },
+};
 export const Secondary: Story = {
    args: {
       color: 'btn-secondary',
    },
 };
 
-export const CustomButton: Story = {
+export const CustomStyled: Story = {
    args: {
-      color: 'btn-null',
+      children: 'Custom Button',
       removeDefaultStyle: true,
-      className: 'bg-amber-700 text-black font-bold p-5',
+      className:
+         'px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600',
    },
 };
 
@@ -70,5 +85,21 @@ export const WithIcon: Story = {
 export const Disable: Story = {
    args: {
       disabled: true,
+   },
+};
+
+export const NullColor: Story = {
+   args: {
+      children: 'No Color',
+      color: 'btn-null',
+      className: 'text-gray-800',
+   },
+};
+
+export const SubmitType: Story = {
+   args: {
+      children: 'Submit',
+      type: 'submit',
+      color: 'btn-success',
    },
 };

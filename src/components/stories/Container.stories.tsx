@@ -4,12 +4,14 @@ import { Container } from '@/components/atoms';
 const meta = {
    title: 'Components/Atom/Container',
    component: Container,
+   tags: ['autodocs'],
    args: {
       children: <div className="bg-amber-700 w-full h-screen">Hello World</div>,
    },
-   parameters: {
-      viewport: {
-         defaultViewport: 'desktop',
+   argTypes: {
+      className: {
+         control: 'text',
+         description: 'Additional CSS classes to apply to the container.',
       },
    },
 } satisfies Meta;
@@ -17,19 +19,23 @@ export default meta;
 
 type Story = StoryObj<typeof Container>;
 
-export const Default: Story = {};
-
-export const Tablet: Story = {
-   parameters: {
-      viewport: {
-         defaultViewport: 'tablet',
-      },
+export const Default: Story = {
+   args: {
+      children: (
+         <div className="bg-gray-100 p-6 text-center">
+            Default responsive container with centered content.
+         </div>
+      ),
    },
 };
-export const Mobile: Story = {
-   parameters: {
-      viewport: {
-         defaultViewport: 'mobile1',
-      },
+
+export const WithCustomClass: Story = {
+   args: {
+      children: (
+         <div className="bg-blue-100 p-6 text-center">
+            Container with custom background via className.
+         </div>
+      ),
+      className: 'my-custom-container',
    },
 };

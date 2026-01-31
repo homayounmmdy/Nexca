@@ -4,6 +4,7 @@ import { ErrorText } from '@/components/atoms';
 const meta = {
    title: 'Components/Atom/ErrorText',
    component: ErrorText,
+   tags: ['autodocs'],
    args: {
       children: 'Something went wrong',
    },
