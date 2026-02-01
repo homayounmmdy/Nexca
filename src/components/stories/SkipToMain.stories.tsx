@@ -4,6 +4,7 @@ import SkipToMain from '@/components/atoms/SkipToMain';
 const meta = {
    title: 'Components/Atom/SkipToMain',
    component: SkipToMain,
+   tags: ['autodocs'],
    parameters: {
       docs: {
          description: {
@@ -12,29 +13,18 @@ const meta = {
          },
       },
    },
-   argTypes: {},
 } satisfies Meta<typeof SkipToMain>;
 
 export default meta;
 
 type Story = StoryObj<typeof SkipToMain>;
 
-/**
- * Default story showing the skip link in its normal state (hidden off-screen).
- * To see it appear, click the canvas or press Tab while focused on the preview.
- */
 export const Default: Story = {};
 
-/**
- * This story demonstrates the focused state explicitly.
- * In real usage, this appears automatically when the user tabs to the link.
- */
 export const Focused: Story = {
    play: async ({ canvasElement }) => {
-      const canvas = canvasElement;
-      const link = canvas.querySelector('a');
+      const link = canvasElement.querySelector('a');
       if (link) {
-         // Simulate focus to show the visible state
          (link as HTMLElement).focus();
       }
    },

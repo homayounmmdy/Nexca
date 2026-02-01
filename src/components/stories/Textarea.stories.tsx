@@ -5,7 +5,9 @@ import { FaRegMessage } from 'react-icons/fa6';
 const meta = {
    title: 'Components/Atom/Textarea',
    component: Textarea,
+   tags: ['autodocs'],
    args: {
+      rows: 4,
       placeholder: 'Enter your value here',
    },
    argTypes: {
@@ -23,6 +25,22 @@ const meta = {
             'textarea-ghost',
             'textarea-link',
          ],
+         description: 'DaisyUI-style textarea color variant',
+      },
+      label: {
+         control: 'text',
+         description:
+            'Optional label text displayed above or beside the textarea',
+      },
+      icon: {
+         control: false,
+         description:
+            'React node (e.g., icon) to display inside a labeled container',
+      },
+      rows: {
+         control: 'number',
+         description: 'Number of visible text lines',
+         defaultValue: 4,
       },
    },
 } satisfies Meta;
@@ -48,8 +66,14 @@ export const WithIcon: Story = {
 
 export const WithLabel: Story = {
    args: {
-      label: 'Enter Your full name',
+      label: 'Your message',
       color: 'textarea-accent',
-      placeholder: 'Enter your name here',
+      placeholder: 'Type your feedback here...',
+   },
+};
+
+export const With7Rows: Story = {
+   args: {
+      rows: 7,
    },
 };

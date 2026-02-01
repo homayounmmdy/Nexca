@@ -5,6 +5,7 @@ import { FaRegMessage } from 'react-icons/fa6';
 const meta = {
    title: 'Components/Atom/Input',
    component: Input,
+   tags: ['autodocs'],
    args: {
       placeholder: 'Enter your value here',
       type: 'text',
@@ -24,27 +25,37 @@ const meta = {
             'input-ghost',
             'input-link',
          ],
+         description: 'DaisyUI-style input color variant',
       },
       type: {
          control: 'select',
          options: [
             'text',
-            'number',
-            'password',
-            'radio',
-            'color',
             'email',
-            'image',
-            'month',
-            'range',
-            'search',
-            'week',
-            'url',
-            'time',
-            'file',
-            'datetime-local',
+            'password',
+            'number',
             'date',
+            'time',
+            'search',
+            'url',
+            'tel',
+            'file',
+            'color',
+            'range',
+            'month',
+            'week',
+            'datetime-local',
          ],
+         description: 'HTML input type',
+      },
+      label: {
+         control: 'text',
+         description: 'Optional label text (renders above input)',
+      },
+      icon: {
+         control: false, // Cannot be controlled via UI; shown only in specific stories
+         description:
+            'React node to display inside a labeled container (e.g., an icon)',
       },
    },
 } satisfies Meta;
