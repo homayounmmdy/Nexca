@@ -1,6 +1,6 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import HomeSettingBtn from '../../molecules/HomeSettingBtn';
+import GoToAdminOrSettings from '../../molecules/GoToAdminOrSettings';
 import { render, screen } from '@testing-library/react';
 import RouteConfig from '../../../config/RouteConfig';
 import { IoMdSettings } from 'react-icons/io';
@@ -22,7 +22,7 @@ describe('button for home and setting', () => {
    });
 
    it('should render the  setting link when user is in admin page', () => {
-      render(<HomeSettingBtn />);
+      render(<GoToAdminOrSettings />);
       const BtnLink = screen.getByRole('link');
 
       expect(BtnLink).toHaveAttribute('title', 'setting');
@@ -31,7 +31,7 @@ describe('button for home and setting', () => {
    });
 
    it('should render the setting icon when user is in admin page', () => {
-      render(<HomeSettingBtn />);
+      render(<GoToAdminOrSettings />);
 
       expect(screen.getByTestId('settingIcon')).toBeInTheDocument();
       expect(screen.queryByTestId('homeIcon')).not.toBeInTheDocument();
@@ -39,7 +39,7 @@ describe('button for home and setting', () => {
 
    it('should render the  home link when user is in setting page', () => {
       (usePathname as any).mockReturnValue('/admin/settings');
-      render(<HomeSettingBtn />);
+      render(<GoToAdminOrSettings />);
       const BtnLink = screen.getByRole('link');
 
       expect(BtnLink).toHaveAttribute('title', 'admin');
@@ -49,7 +49,7 @@ describe('button for home and setting', () => {
 
    it('should render the home icon when user is in setting page', () => {
       (usePathname as any).mockReturnValue('/admin/settings');
-      render(<HomeSettingBtn />);
+      render(<GoToAdminOrSettings />);
 
       expect(screen.getByTestId('homeIcon')).toBeInTheDocument();
       expect(screen.queryByTestId('settingIcon')).not.toBeInTheDocument();

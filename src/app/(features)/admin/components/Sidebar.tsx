@@ -1,6 +1,6 @@
 'use client';
 import { Button, SiteNameLink } from '@/components/atoms';
-import { HomeSettingBtn } from '@/components/molecules';
+import { GoToAdminOrSettings } from '@/components/molecules';
 import RouteConfig from '@/config/RouteConfig';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -23,7 +23,7 @@ const Sidebar: React.FC = () => {
                <SiteNameLink />
             </Link>
             <div className="flex gap-1 sm:gap-3">
-               <HomeSettingBtn />
+               <GoToAdminOrSettings />
                <Button
                   className="lg:hidden"
                   color="btn-primary"

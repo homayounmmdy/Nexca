@@ -7,7 +7,7 @@ export { default as FullHoverAnimation } from './FullHoverAnimation';
 export { default as GitHubBtn } from './GitHubBtn';
 export { default as GlobalSearchInput } from './GlobalSearchInput';
 export { default as HamburgerIcon } from './HamburgerIcon';
-export { default as HomeSettingBtn } from './HomeSettingBtn';
+export { default as GoToAdminOrSettings } from './GoToAdminOrSettings';
 export { default as NexcaMark } from './NexcaMark';
 export { default as PWAInstallPopup } from './PWAInstallPopup';
 export { default as SearchBar } from './SearchBar';

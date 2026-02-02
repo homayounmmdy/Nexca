@@ -7,7 +7,25 @@ import { FaHome } from 'react-icons/fa';
 import { IoMdSettings } from 'react-icons/io';
 import { Button } from '../atoms';
 
-const HomeSettingBtn: React.FC = () => {
+/**
+ * A navigation toggle component that conditionally renders a link to either the admin dashboard
+ * or the settings page, based on the current route.
+ *
+ * - When the user is on the settings page (`/admin/settings`), it displays a "Home" icon linking back to the admin dashboard.
+ * - Otherwise, it displays a "Settings" icon linking to the settings page.
+ *
+ * This component is designed for use in the admin section of the application and relies on
+ * `next/navigation`'s `usePathname` hook to determine the current route.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <GoToAdminOrSettings />
+ * ```
+ *
+ * @returns {JSX.Element} A clickable button wrapped in a Next.js `Link` that toggles between admin and settings views.
+ */
+const GoToAdminOrSettings: React.FC = (): JSX.Element => {
    const pathname = usePathname();
 
    if (pathname === RouteConfig.admin.settings.base) {
@@ -37,4 +55,4 @@ const HomeSettingBtn: React.FC = () => {
    }
 };
 
-export default HomeSettingBtn;
+export default GoToAdminOrSettings;
