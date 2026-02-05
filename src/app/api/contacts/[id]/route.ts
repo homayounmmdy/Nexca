@@ -1,26 +1,21 @@
-/**
- * @file API route for handling contacts by ID.
- * @module /api/contacts/[id]
- */
-
 import ContactsCash from '@/cash/ContactsCash';
 import { ContactsModel } from '@/models';
 import RequestHandler from '@/util/handler/RequestHandler';
 
 /**
- * Handles DELETE requests to delete a contact by its ID.
+ * DELETE /api/contactus/[id]
+ *
+ * Deletes a contact message by its unique identifier.
  *
  * @param {Request} req - The incoming HTTP request.
- * @param {Object} params - The route parameters.
- * @param {string} params.id - The ID of the contact to delete.
- * @returns {Promise<Response>} A response indicating success or failure of the deletion operation.
+ * @param {{ params: { id: string } }} context - Route context containing the contact message ID.
+ * @param {string} context.params.id - The unique identifier of the contact message to delete.
  */
-
 export async function DELETE(
    req: Request,
    { params }: { params: { id: string } }
 ) {
    const { id } = params;
    const handler = new RequestHandler(ContactsModel, ContactsCash);
-   return handler.DELETE(id, 'Post Deleted successfully');
+   return handler.DELETE(id, 'Message Deleted successfully');
 }
