@@ -14,17 +14,24 @@ interface PaginatedResponse<T> {
    };
 }
 
+/**
+ * GET /api/posts
+ *
+ * Retrieves a list of posts. Supports pagination via `page` and `limit` query parameters.
+ * If neither `page` nor `limit` is provided, returns all posts without pagination.
+ *
+ * @param {Request} req - The incoming HTTP request, which may include `page` and `limit` query parameters.
+ */
 export async function GET(req: Request): Promise<Response> {
-   const url = new URL(req.url); // Extract URL parameters from the request
-   const page = parseInt(url.searchParams.get('page') || '1', 10); // Default to page 1 if not provided
-   const limit = parseInt(url.searchParams.get('limit') || '10', 10); // Default to 10 items per page
+   const url = new URL(req.url);
+   const page = parseInt(url.searchParams.get('page') || '1', 10);
+   const limit = parseInt(url.searchParams.get('limit') || '10', 10);
    const skip = (page - 1) * limit;
 
    const handler = new RequestHandler<PostsCashType>(PostModel, PostsCash);
 
-   // Handle case for all posts (no pagination)
    if (!url.searchParams.has('page') || !url.searchParams.has('limit')) {
-      return handler.GetAll(); // Return all posts
+      return handler.GetAll();
    }
 
    try {
@@ -53,6 +60,13 @@ export async function GET(req: Request): Promise<Response> {
    }
 }
 
+/**
+ * POST /api/posts
+ *
+ * Creates a new post from the request body.
+ *
+ * @param {Request} req - The incoming HTTP request containing the post data.
+ */
 export async function POST(req: Request): Promise<Response> {
    const handler = new RequestHandler<PostsCashType>(PostModel, PostsCash);
    return handler.Post(req, 'Post Created successfully');
