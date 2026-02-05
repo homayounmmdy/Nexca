@@ -1,18 +1,15 @@
-/**
- * @file API route for handling comments by ID.
- * @module /api/comments/[id]
- */
 import CommentsCash from '@/cash/CommentsCash';
 import { CommentsModel } from '@/models';
 import RequestHandler from '@/util/handler/RequestHandler';
 
 /**
- * Handles GET requests to fetch a comment by its ID.
+ * GET /api/comments/[id]
+ *
+ * Retrieves a single comment by its unique identifier.
  *
  * @param {Request} req - The incoming HTTP request.
- * @param {Object} params - The route parameters.
- * @param {string} params.id - The ID of the comment to fetch.
- * @returns {Promise<Response>} A response containing the comment data or an error message.
+ * @param {{ params: { id: string } }} context - Route context containing the comment ID.
+ * @param {string} context.params.id - The unique identifier of the comment to retrieve.
  */
 export async function GET(
    req: Request,
@@ -24,12 +21,13 @@ export async function GET(
 }
 
 /**
- * Handles PUT requests to update a comment by its ID.
+ * PUT /api/comments/[id]
+ *
+ * Updates an existing comment identified by its ID with the data provided in the request body.
  *
  * @param {Request} req - The incoming HTTP request containing the updated comment data.
- * @param {Object} params - The route parameters.
- * @param {string} params.id - The ID of the comment to update.
- * @returns {Promise<Response>} A response indicating success or failure of the update operation.
+ * @param {{ params: { id: string } }} context - Route context containing the comment ID.
+ * @param {string} context.params.id - The unique identifier of the comment to update.
  */
 export async function PUT(
    req: Request,
@@ -41,12 +39,13 @@ export async function PUT(
 }
 
 /**
- * Handles DELETE requests to delete a comment by its ID.
+ * DELETE /api/comments/[id]
+ *
+ * Deletes a comment by its unique identifier.
  *
  * @param {Request} req - The incoming HTTP request.
- * @param {Object} params - The route parameters.
- * @param {string} params.id - The ID of the comment to delete.
- * @returns {Promise<Response>} A response indicating success or failure of the deletion operation.
+ * @param {{ params: { id: string } }} context - Route context containing the comment ID.
+ * @param {string} context.params.id - The unique identifier of the comment to delete.
  */
 export async function DELETE(
    req: Request,
