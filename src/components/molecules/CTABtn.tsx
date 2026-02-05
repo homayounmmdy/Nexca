@@ -2,7 +2,34 @@ import Link from 'next/link';
 import { IoArrowUpCircleSharp } from 'react-icons/io5';
 import { Button } from '../atoms';
 
-const CTABtn = ({ children, href }: { children: string; href: string }) => {
+/**
+ * A visually enhanced call-to-action (CTA) button component that wraps a link with animated styling.
+ *
+ * This component renders a styled `<Button>` inside a Next.js `<Link>`, featuring:
+ * - A rotating arrow icon on hover
+ * - A dynamic background animation using pseudo-elements
+ * - Responsive typography and spacing
+ * - Accessible labeling via `aria-label` and `title`
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.children - The visible text label of the CTA button.
+ * @param {string} props.href - The destination URL for the link.
+ *
+ * @example
+ * ```tsx
+ * <CTABtn href="/contact">Get in Touch</CTABtn>
+ * ```
+ *
+ * @returns {JSX.Element} A styled, accessible CTA button wrapped in a Next.js link.
+ */
+
+const CTABtn = ({
+   children,
+   href,
+}: {
+   children: string;
+   href: string;
+}): JSX.Element => {
    return (
       <Link href={href} title={children} aria-label={`${children} link`}>
          <Button
