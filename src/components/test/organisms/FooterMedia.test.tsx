@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import FooterMedia from '../../organisms/FooterMedia';
+import FooterMedia from '@/components/organisms/FooterMedia';
 
 describe('FooterMedia', () => {
    it('renders the component with all social media links', () => {

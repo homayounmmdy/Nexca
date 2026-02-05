@@ -1,8 +1,8 @@
-import { SE_MAP_DATA } from '../../../../../config/maps';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import React from 'react';
-import SEMap from '../../(maps)/SEMap';
+import { SE_MAP_DATA } from '@/config/maps';
+import SEMap from '@/app/(features)/maps/(maps)/SEMap';
 
 describe('Sweden Map', () => {
    const activeProvinceId = '1';

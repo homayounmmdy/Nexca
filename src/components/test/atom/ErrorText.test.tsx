@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import ErrorText from '../../atoms/ErrorText';
+import { ErrorText } from '@/components/atoms';
 
 describe('ErrorText Component', () => {
    it('renders the children correctly', () => {

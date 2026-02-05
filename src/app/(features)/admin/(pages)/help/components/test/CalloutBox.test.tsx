@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import CalloutBox from '../CalloutBox';
+import CalloutBox from '@/app/(features)/admin/(pages)/help/components/CalloutBox';
 
 describe('Callout Box component', () => {
    it('should renders with default title', () => {

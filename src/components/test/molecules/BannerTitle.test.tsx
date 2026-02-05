@@ -1,6 +1,6 @@
 import React from 'react';
-import BannerTitle from '../../molecules/BannerTitle';
 import { render, screen } from '@testing-library/react';
+import { BannerTitle } from '@/components/molecules';
 
 describe('BannerTitle component', () => {
    it('should renders all the component correctly', () => {

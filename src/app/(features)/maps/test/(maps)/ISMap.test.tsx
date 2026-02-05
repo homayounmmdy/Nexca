@@ -1,8 +1,8 @@
-import { IS_MAP_DATA } from '../../../../../config/maps';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import React from 'react';
-import ISMap from '../../(maps)/ISMap';
+import { IS_MAP_DATA } from '@/config/maps';
+import ISMap from '@/app/(features)/maps/(maps)/ISMap';
 
 describe('Iceland Map', () => {
    const activeProvinceId = '1';

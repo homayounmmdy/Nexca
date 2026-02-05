@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import SkipToMain from '../../atoms/SkipToMain';
 import userEvent from '@testing-library/user-event';
+import { SkipToMain } from '@/components/atoms';
 
 // Mock next/link since we're not testing Next.js routing
 vi.mock('next/link', () => {

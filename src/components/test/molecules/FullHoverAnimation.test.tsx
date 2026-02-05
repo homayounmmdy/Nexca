@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import FullHoverAnimation from '../../molecules/FullHoverAnimation';
+import { FullHoverAnimation } from '@/components/molecules';
 
 describe('FullHoverAnimation components', () => {
    it('should render correctly without link', () => {

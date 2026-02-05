@@ -1,5 +1,5 @@
 import { CommentsCashType } from '@/types/CashTypes';
-import CommentsCash from '../CommentsCash';
+import CommentsCash from '@/cash/CommentsCash';
 
 describe('CommentsCash', () => {
    it('should have the correct structure', () => {

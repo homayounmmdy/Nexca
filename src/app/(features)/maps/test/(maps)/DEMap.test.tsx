@@ -1,8 +1,8 @@
-import { DE_MAP_DATA } from '../../../../../config/maps';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import React from 'react';
-import DEMap from '../../(maps)/DEMap';
+import { DE_MAP_DATA } from '@/config/maps';
+import DEMap from '@/app/(features)/maps/(maps)/DEMap';
 
 describe('Germany Map', () => {
    const activeProvinceId = '3';

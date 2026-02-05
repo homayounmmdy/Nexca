@@ -1,10 +1,9 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import GoToAdminOrSettings from '../../molecules/GoToAdminOrSettings';
 import { render, screen } from '@testing-library/react';
-import RouteConfig from '../../../config/RouteConfig';
-import { IoMdSettings } from 'react-icons/io';
 import { expect } from 'vitest';
+import { GoToAdminOrSettings } from '@/components/molecules';
+import RouteConfig from '@/config/RouteConfig';
 
 // Mock the usePathname hook
 vi.mock('next/navigation', () => ({

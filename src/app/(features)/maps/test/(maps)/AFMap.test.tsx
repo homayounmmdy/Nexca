@@ -1,8 +1,8 @@
-import { AF_MAP_DATA } from '../../../../../config/maps';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import React from 'react';
-import AFMap from '../../(maps)/AFMap';
+import { AF_MAP_DATA } from '@/config/maps';
+import AFMap from '@/app/(features)/maps/(maps)/AFMap';
 
 describe('Afghanistan Map', () => {
    const activeProvinceId = '14';

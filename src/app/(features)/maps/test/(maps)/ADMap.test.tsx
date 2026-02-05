@@ -1,8 +1,8 @@
-import { AD_MAP_DATA } from '../../../../../config/maps';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import React from 'react';
-import ADMap from '../../(maps)/ADMap';
+import ADMap from '@/app/(features)/maps/(maps)/ADMap';
+import { AD_MAP_DATA } from '@/config/maps';
 
 describe('Andorra Map', () => {
    const activeProvinceId = '7';

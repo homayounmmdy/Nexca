@@ -1,8 +1,8 @@
-import { DZ_MAP_DATA } from '../../../../../config/maps';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import React from 'react';
-import DZMap from '../../(maps)/DZMap';
+import { DZ_MAP_DATA } from '@/config/maps';
+import DZMap from '@/app/(features)/maps/(maps)/DZMap';
 
 describe('Andorra Map', () => {
    const activeProvinceId = '4';

@@ -2,7 +2,7 @@ import React from 'react';
 import { InputType } from '@/types/FormFiledType';
 import { render, screen } from '@testing-library/react';
 import { FaUser } from 'react-icons/fa';
-import Input from '../../atoms/Input';
+import { Input } from '@/components/atoms';
 
 describe('Input Component', () => {
    it('should render the basic input with default props', () => {

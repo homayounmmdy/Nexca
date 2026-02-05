@@ -1,6 +1,6 @@
 import React from 'react';
 import { describe, expect, it } from 'vitest';
-import { FooterLinkData } from '../data';
+import { FooterLinkData } from '@/config/data';
 
 describe('Footer Link Data', () => {
    it('should have the correct structure and length', () => {

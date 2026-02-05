@@ -1,9 +1,8 @@
-// GitHubBtn.test.tsx
 import React from 'react';
-import SiteConfig from '../../../config/site';
-import GitHubBtn from '../../molecules/GitHubBtn';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
+import { GitHubBtn } from '@/components/molecules';
+import SiteConfig from '@/config/site';
 
 describe('GitHubBtn', () => {
    it('should render the correct link with default props', () => {

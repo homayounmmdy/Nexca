@@ -14,7 +14,7 @@ import {
 import { FaQuestion } from 'react-icons/fa6';
 import { MdLiveTv, MdOutlineMail } from 'react-icons/md';
 import { SiRelay } from 'react-icons/si';
-import { adminPages, EditPostPages } from '../adminPage';
+import { adminPages, EditPostPages } from '@/config/adminPage';
 
 describe('adminPages', () => {
    const AmountAdminPages = 12;

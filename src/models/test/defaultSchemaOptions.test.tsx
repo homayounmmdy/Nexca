@@ -1,4 +1,4 @@
-import { defaultSchemaOptions } from '../../models/schemaOptions';
+import { defaultSchemaOptions } from '@/models/schemaOptions';
 
 describe('defaultSchemaOptions', () => {
    it('should have the correct structure and values', () => {

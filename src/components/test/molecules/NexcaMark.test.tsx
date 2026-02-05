@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import NexcaMark from '../../molecules/NexcaMark';
+import { NexcaMark } from '@/components/molecules';
 
 describe('NexcaMark Component', () => {
    const componentsHelper = (status: boolean) => {

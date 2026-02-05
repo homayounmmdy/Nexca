@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, RenderResult, screen } from '@testing-library/react';
-import Container from '../../../components/atoms/Container';
+import { Container } from '@/components/atoms';
 
 describe('Container Component', () => {
    interface RenderContainerResult extends RenderResult {

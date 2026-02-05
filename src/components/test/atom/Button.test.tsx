@@ -3,7 +3,7 @@ import { ButtonType } from '@/types/FormFiledType';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Fa0 } from 'react-icons/fa6';
-import Button from '../../atoms/Button';
+import { Button } from '@/components/atoms';
 
 describe('Button component', () => {
    const defaultProps: ButtonType = {

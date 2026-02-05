@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import HeaderNavLink from '../../atoms/HeaderNavLink';
 import { usePathname } from 'next/navigation';
+import { HeaderNavLink } from '@/components/atoms';
 
 // Mock next/navigation
 vi.mock('next/navigation', () => ({

@@ -1,8 +1,8 @@
-import { GL_MAP_DATA } from '../../../../../config/maps';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import React from 'react';
-import GLMap from '../../(maps)/GLMap';
+import { GL_MAP_DATA } from '@/config/maps';
+import GLMap from '@/app/(features)/maps/(maps)/GLMap';
 
 describe('Greenland Map', () => {
    const activeProvinceId = '4';

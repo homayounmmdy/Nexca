@@ -1,5 +1,5 @@
 import { ContactsCashType } from '@/types/CashTypes';
-import ContactsCash from '../ContactsCash';
+import ContactsCash from '@/cash/ContactsCash';
 
 describe('Contacts Cash', () => {
    it('should have the correct structure', () => {

@@ -1,8 +1,8 @@
-import { AL_MAP_DATA } from '../../../../../config/maps';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import React from 'react';
-import ALMap from '../../(maps)/ALMap';
+import { AL_MAP_DATA } from '@/config/maps';
+import ALMap from '@/app/(features)/maps/(maps)/ALMap';
 
 describe('Albania Map', () => {
    const activeProvinceId = '11';

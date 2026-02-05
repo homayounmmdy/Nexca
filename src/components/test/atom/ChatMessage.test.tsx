@@ -1,6 +1,6 @@
 import React from 'react';
-import ChatMessage from '../../atoms/ChatMessage';
 import { render, screen } from '@testing-library/react';
+import { ChatMessage } from '@/components/atoms';
 
 describe('ChatMessage component', () => {
    it('should render the Default Chat Message correctly', () => {

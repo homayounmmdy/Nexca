@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import SiteNameLink from '../../atoms/SiteNameLink';
-import SiteConfig from '../../../config/site';
+import { SiteNameLink } from '@/components/atoms';
+import SiteConfig from '@/config/site';
 
 describe('SiteNameLink component', () => {
    it('should have right link for Logo', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import SectionsTitle from '../../atoms/SectionsTitle';
+import { SectionsTitle } from '@/components/atoms';
 
 describe('SectionsTitle component', () => {
    it('render default SectionsTitle correctly', () => {

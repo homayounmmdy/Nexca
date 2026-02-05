@@ -2,7 +2,7 @@ import React from 'react';
 import { TextareaType } from '@/types/FormFiledType';
 import { render, screen } from '@testing-library/react';
 import { FaUser } from 'react-icons/fa';
-import Textarea from '../../atoms/Textarea';
+import { Textarea } from '@/components/atoms';
 
 describe('Textarea Component', () => {
    it('should render the basic textarea with default props', () => {

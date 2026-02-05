@@ -1,7 +1,7 @@
-import BulletPost from '../BulletPost';
 import { render, screen } from '@testing-library/react';
-import PostsCash from '../../../../../cash/PostsCash';
 import React from 'react';
+import BulletPost from '@/app/(features)/templates/(components)/BulletPost';
+import PostsCash from '@/cash/PostsCash';
 
 describe('BulletPost Component', () => {
    it('should have link with correct attributes', () => {

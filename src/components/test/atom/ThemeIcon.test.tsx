@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import ThemeIcon from '../../atoms/ThemeIcon';
+import { ThemeIcon } from '@/components/atoms';
 
 describe('ThemeIcon', () => {
    it('renders without crashing', () => {

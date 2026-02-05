@@ -23,7 +23,7 @@ import {
    TIMELINE_KEY,
    TOTAL_VIEW,
    VERTICAL_POSTS_QUERY_KEY,
-} from '../Constants';
+} from '@/config/Constants';
 
 describe('Constants', () => {
    describe('Local Storage Keys', () => {
