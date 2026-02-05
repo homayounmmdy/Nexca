@@ -1,56 +1,70 @@
+// GitHubBtn.test.tsx
 import React from 'react';
 import SiteConfig from '../../../config/site';
 import GitHubBtn from '../../molecules/GitHubBtn';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 
-describe('Github button', () => {
-   it('should render the correct link for button', () => {
+describe('GitHubBtn', () => {
+   it('should render the correct link with default props', () => {
       render(<GitHubBtn />);
-      const BtnLink = screen.getByTestId('btnLink');
+      const btnLink = screen.getByTestId('github-btn-link');
 
-      expect(BtnLink).toHaveAttribute('href', SiteConfig.github);
-      expect(BtnLink).toHaveAttribute('rel', 'nofollow');
-      expect(BtnLink).toHaveAttribute('aria-label', 'GitHub button link');
-      expect(BtnLink).toHaveAttribute('target', '_blank');
-      expect(BtnLink).toHaveAttribute('title', 'GitHub');
+      expect(btnLink).toHaveAttribute('href', SiteConfig.github);
+      expect(btnLink).toHaveAttribute('rel', 'nofollow noopener noreferrer');
+      expect(btnLink).toHaveAttribute(
+         'aria-label',
+         'Visit GitHub profile or repository'
+      );
+      expect(btnLink).toHaveAttribute('target', '_blank');
+      expect(btnLink).toHaveAttribute('title', 'GitHub');
    });
 
-   it('should have render the Button Correctly', () => {
+   it('should render the button with correct content and type', () => {
       render(<GitHubBtn />);
 
-      const Btn = screen.queryByRole('button');
-      const BtnText = screen.getByTestId('btnText');
+      const button = screen.getByRole('button');
+      const btnText = screen.getByTestId('github-btn-text');
+      const githubIcon = screen.getByLabelText(/GitHub/i);
+      const starIcon = screen.getByTestId('github-star-icon');
 
-      expect(Btn).toHaveAttribute('type', 'button');
-      expect(screen.getByTestId('btnIcon')).toBeInTheDocument();
-      expect(BtnText).toHaveTextContent('GitHub');
+      expect(button).toHaveAttribute('type', 'button');
+      expect(btnText).toBeInTheDocument();
+      expect(btnText).toHaveTextContent('GitHub');
+      expect(githubIcon).toBeInTheDocument();
+      expect(starIcon).toBeInTheDocument();
    });
 
-   it('should return the right link when user set link', () => {
-      render(<GitHubBtn link="https://google.com" />);
-      const BtnLink = screen.getByTestId('btnLink');
+   it('should use custom link when provided', () => {
+      const customUrl = 'https://github.com/example/repo';
+      render(<GitHubBtn link={customUrl} />);
+      const btnLink = screen.getByTestId('github-btn-link');
 
-      expect(BtnLink).toHaveAttribute('href', 'https://google.com');
+      expect(btnLink).toHaveAttribute('href', customUrl);
    });
+
    it('should apply custom className to the link when aStyle is provided', () => {
       const customClass = 'custom-class';
       render(<GitHubBtn aStyle={customClass} />);
-      const BtnLink = screen.getByTestId('btnLink');
+      const btnLink = screen.getByTestId('github-btn-link');
 
-      expect(BtnLink).toHaveClass(customClass);
+      expect(btnLink).toHaveClass(customClass);
    });
 
-   it('should combine default props and custom props correctly', () => {
+   it('should combine default and custom props correctly', () => {
       const customClass = 'custom-class';
-      const customLink = 'https://custom.com';
+      const customLink = 'https://github.com/test/repo';
       render(<GitHubBtn link={customLink} aStyle={customClass} />);
-      const BtnLink = screen.getByTestId('btnLink');
+      const btnLink = screen.getByTestId('github-btn-link');
 
-      expect(BtnLink).toHaveAttribute('href', customLink);
-      expect(BtnLink).toHaveClass(customClass);
-      // Verify other default attributes are still present
-      expect(BtnLink).toHaveAttribute('rel', 'nofollow');
-      expect(BtnLink).toHaveAttribute('aria-label', 'GitHub button link');
+      expect(btnLink).toHaveAttribute('href', customLink);
+      expect(btnLink).toHaveClass(customClass);
+      expect(btnLink).toHaveAttribute('rel', 'nofollow noopener noreferrer');
+      expect(btnLink).toHaveAttribute(
+         'aria-label',
+         'Visit GitHub profile or repository'
+      );
+      expect(btnLink).toHaveAttribute('target', '_blank');
+      expect(btnLink).toHaveAttribute('title', 'GitHub');
    });
 });

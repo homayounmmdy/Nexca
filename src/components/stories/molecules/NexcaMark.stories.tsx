@@ -20,7 +20,6 @@ const meta = {
          description:
             'Controls whether the verification badge is displayed. When `true`, renders the seal icon; when `false`, renders nothing.',
          table: {
-            defaultValue: { summary: false },
             type: { summary: 'boolean' },
          },
       },
