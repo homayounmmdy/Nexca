@@ -43,10 +43,3 @@ export const WithLongText: Story = {
       children: 'Explore Our Features Now',
    },
 };
-
-export const ExternalLink: Story = {
-   args: {
-      children: 'Visit External Site',
-      href: 'https://external-site.com',
-   },
-};
