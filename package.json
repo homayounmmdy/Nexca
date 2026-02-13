@@ -59,7 +59,7 @@
       "zustand": "^5.0.1"
    },
    "overrides": {
-      "tar": "7.5.4"
+      "tar": "7.5.7"
    },
    "author": "homayounmmdy",
    "devDependencies": {
