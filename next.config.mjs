@@ -3,6 +3,7 @@ import nextPwa from 'next-pwa';
 const isDev = process.env.NEXT_PUBLIC_STATUS === 'dev';
 
 const nextConfig = {
+   optimizeFonts: false,
    images: {
       remotePatterns: [
          {
