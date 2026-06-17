@@ -1,6 +1,5 @@
 {
-   "*.{js,jsx,ts,tsx,css}": [
-      "prettier --write",
-      "vitest related --run --passWithNoTests"
-   ]
+  "*.{js,jsx,ts,tsx,css}": [
+    "eslint --fix"
+  ]
 }

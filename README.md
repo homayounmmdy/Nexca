@@ -1,86 +1,159 @@
-# Nexca | Your lovely Admin Panel
+# Turborepo starter
 
-![1000000339](https://github.com/user-attachments/assets/f81b403d-79f7-4e75-aff6-1dfe27b3897e)
+This Turborepo starter is maintained by the Turborepo core team.
 
-Experience the power of an open-source CMS built with Next.js. Effortlessly manage content, streamline workflows, and connect with your audience—perfect for agencies, bloggers, and creators.
+## Using this example
 
-![1000000340](https://github.com/user-attachments/assets/4e4cccd9-7ba9-4893-ae96-0448793d2973)
+Run the following command:
 
-Nexca is your go-to platform for creating powerful admin panels. Manage data, share thoughts, and connect with your audience easily, whether you're an agency or an individual looking to build your brand.
+```sh
+npx create-turbo@latest
+```
 
-![1000000338](https://github.com/user-attachments/assets/29f5676f-6868-4ee0-aa91-50689ef162ba)
+## What's inside?
 
-For detailed documentation, visit the [Official Nexca Docs](https://nexca-docs.vercel.app/).  
-For a detailed explanation of each section, visit the [Help Page](https://nexca.vercel.app/admin/help).
+This Turborepo includes the following packages/apps:
 
-![1000000341](https://github.com/user-attachments/assets/15eeddd0-c2b9-49ff-aadc-17ae0e816f2a)
+### Apps and Packages
 
----
+- `docs`: a [Next.js](https://nextjs.org/) app
+- `web`: another [Next.js](https://nextjs.org/) app
+- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
-## Getting Started
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-### Prerequisites
+### Utilities
 
-Before you begin, ensure you have met the following requirements:
+This Turborepo has some additional tools already setup for you:
 
-- Node.js version 18.17.0 or above
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
 
-### Installation
+### Build
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/homayounmmdy/nexca.git
-   ```
-2. **Navigate to the project directory:**
+To build all apps and packages, run the following command:
 
-   ```bash
-   cd nexca
-   ```
+With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
 
-3. **Install the dependencies:**
-   ```bash
-   npm install
-   ```
+```sh
+cd my-turborepo
+turbo build
+```
 
-### Configuration
+Without global `turbo`, use your package manager:
 
-1. **Copy the sample environment file and rename it:**
+```sh
+cd my-turborepo
+npx turbo build
+npm dlx turbo build
+npm exec turbo build
+```
 
-   ```bash
-   cp .env.sample .env.local
-   ```
+You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
 
-2. **Create your own `.env` file and customize the configuration as needed:**
-   - Open the `.env.local` file and edit the values according to your setup.
-   - Ensure all necessary environment variables are configured.
+With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
 
-### Running the Project
+```sh
+turbo build --filter=docs
+```
 
-1. **Start the development server:**
+Without global `turbo`:
 
-   ```bash
-   npm run dev
-   ```
+```sh
+npx turbo build --filter=docs
+npm exec turbo build --filter=docs
+npm exec turbo build --filter=docs
+```
 
-2. **Access the admin panel:**
-   - Open your browser and go to `http://localhost:3000` (or the port number specified in your `.env` file).
-   - Enjoy the admin panel.
+### Develop
 
----
+To develop all apps and packages, run the following command:
 
-## Additional Information
+With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
 
-- If you encounter any issues, feel free to open an issue on the [GitHub Issues page](https://github.com/homayounmmdy/nexca/issues).
+```sh
+cd my-turborepo
+turbo dev
+```
 
----
+Without global `turbo`, use your package manager:
 
-## Contributing
+```sh
+cd my-turborepo
+npx turbo dev
+npm exec turbo dev
+npm exec turbo dev
+```
 
-If you want to contribute to this project, please follow these steps:
+You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature-branch`).
-6. Open a Pull Request.
+With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+
+```sh
+turbo dev --filter=web
+```
+
+Without global `turbo`:
+
+```sh
+npx turbo dev --filter=web
+npm exec turbo dev --filter=web
+npm exec turbo dev --filter=web
+```
+
+### Remote Caching
+
+> [!TIP]
+> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+
+Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+
+By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+
+With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
+
+```sh
+cd my-turborepo
+turbo login
+```
+
+Without global `turbo`, use your package manager:
+
+```sh
+cd my-turborepo
+npx turbo login
+npm exec turbo login
+npm exec turbo login
+```
+
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+
+With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+
+```sh
+turbo link
+```
+
+Without global `turbo`:
+
+```sh
+npx turbo link
+npm exec turbo link
+npm exec turbo link
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
+- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
+- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
+- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
+- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
+- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
