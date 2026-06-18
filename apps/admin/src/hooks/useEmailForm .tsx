@@ -26,7 +26,7 @@ export const useEmailForm = (successRedirect = '/') => {
 
       if (!validationResult.success) {
          // If validation fails, display the first error message using react-toastify
-         toast.error(validationResult.error.errors[0].message);
+         toast.error(validationResult.error.message);
          return;
       }
 

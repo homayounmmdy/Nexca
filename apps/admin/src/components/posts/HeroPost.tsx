@@ -1,7 +1,7 @@
 'use client';
 import { PostsCashType } from '@/types/CashTypes';
 import { postLinkGenerator } from '@/util/ServerUtil';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoIosGlobe } from 'react-icons/io';
@@ -9,7 +9,7 @@ import { IoIosGlobe } from 'react-icons/io';
 const HeroPost = ({ post }: { post: PostsCashType }) => {
    const postLink = postLinkGenerator(post._id, post.title);
 
-   const itemVariants = {
+   const itemVariants:Variants = {
       hidden: { opacity: 0, y: 20 },
       visible: {
          opacity: 1,

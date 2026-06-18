@@ -23,9 +23,9 @@ import { Button } from '../atoms';
  * <GoToAdminOrSettings />
  * ```
  *
- * @returns {JSX.Element} A clickable button wrapped in a Next.js `Link` that toggles between admin and settings views.
+ * @returns {React.JSX.Element} A clickable button wrapped in a Next.js `Link` that toggles between admin and settings views.
  */
-const GoToAdminOrSettings: React.FC = (): JSX.Element => {
+const GoToAdminOrSettings: React.FC = (): React.JSX.Element => {
    const pathname = usePathname();
 
    if (pathname === RouteConfig.admin.settings.base) {

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, {JSX} from 'react';
 import SiteConfig from '../../config/site';
 import { motion } from 'framer-motion';
 import Link from 'next/link';

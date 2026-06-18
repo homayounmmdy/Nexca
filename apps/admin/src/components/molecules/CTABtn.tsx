@@ -20,7 +20,7 @@ import { Button } from '../atoms';
  * <CTABtn href="/contact">Get in Touch</CTABtn>
  * ```
  *
- * @returns {JSX.Element} A styled, accessible CTA button wrapped in a Next.js link.
+ * @returns {React.JSX.Element} A styled, accessible CTA button wrapped in a Next.js link.
  */
 
 const CTABtn = ({
@@ -29,7 +29,7 @@ const CTABtn = ({
 }: {
    children: string;
    href: string;
-}): JSX.Element => {
+}): React.JSX.Element => {
    return (
       <Link href={href} title={children} aria-label={`${children} link`}>
          <Button

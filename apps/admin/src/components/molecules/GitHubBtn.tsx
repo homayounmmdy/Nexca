@@ -24,12 +24,12 @@ interface GitHubBtnProps {
  * and follows modern UI/UX patterns with hover effects and animations.
  *
  * @param {GitHubBtnProps} props - The component props
- * @returns {JSX.Element} A link-wrapped GitHub button with star rating
+ * @returns {React.JSX.Element} A link-wrapped GitHub button with star rating
  */
 const GitHubBtn = ({
    link = SiteConfig.github,
    aStyle = '',
-}: GitHubBtnProps): JSX.Element => {
+}: GitHubBtnProps): React.JSX.Element => {
    return (
       <Link
          href={link}

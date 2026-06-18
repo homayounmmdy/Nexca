@@ -14,13 +14,13 @@ import Link from 'next/link';
  * @example
  * <SkipToMain />
  *
- * @returns {JSX.Element} The accessible skip link.
+ * @returns {React.JSX.Element} The accessible skip link.
  */
 
-export default function SkipToMain(): JSX.Element {
+export default function SkipToMain(): React.JSX.Element {
    return (
       <Link
-         className="absolute left-0 top-0 z-[60] -translate-y-full bg-indigo-700 text-white px-4 py-2 text-white focus:translate-y-0 focus:outline-none"
+         className="absolute left-0 top-0 z-60 -translate-y-full bg-indigo-700  px-4 py-2 text-white focus:translate-y-0 focus:outline-none"
          href="#main"
          aria-label="Skip to main content"
          title="Skip to main content"

@@ -63,7 +63,7 @@ export type SocialMediaType = {
 };
 
 export type FallbackProps = {
-   error: Error;
+   error: unknown;
    resetErrorBoundary: () => void;
    retryCount: number;
    setRetryCount: React.Dispatch<React.SetStateAction<number>>;

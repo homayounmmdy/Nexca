@@ -10,10 +10,10 @@ import React from 'react';
  * @example
  * <Spinner />
  *
- * @returns {JSX.Element} The centered loading spinner UI.
+ * @returns {React.JSX.Element} The centered loading spinner UI.
  */
 
-const Spinner = (): JSX.Element => {
+const Spinner = (): React.JSX.Element => {
    return (
       <div
          data-testid="spinnerContainer"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 
 /**
  * A simple, reusable component for displaying error messages.

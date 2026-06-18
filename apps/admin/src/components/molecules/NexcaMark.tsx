@@ -20,10 +20,10 @@ interface Props {
  * <NexcaMark master={true} />
  * ```
  *
- * @returns {JSX.Element | null} A linked verified seal icon if `master` is true; otherwise, `null`.
+ * @returns {React.JSX.Element | null} A linked verified seal icon if `master` is true; otherwise, `null`.
  */
 
-const NexcaMark: React.FC<Props> = ({ master }: Props): JSX.Element | null => {
+const NexcaMark: React.FC<Props> = ({ master }: Props): React.JSX.Element | null => {
    if (!master) return null;
    return (
       <span
