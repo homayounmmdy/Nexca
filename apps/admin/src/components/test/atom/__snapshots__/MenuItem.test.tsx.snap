@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MenuItem > matches snapshot for active desktop state 1`] = `
+<a
+  class="rounded-xl border-2 border-base-100 hover:bg-indigo-700 hover:text-white transition-colors ease-in-out bg-indigo-700 text-white"
+  href="/home"
+  title="Home"
+>
+  Home
+</a>
+`;
+
+exports[`MenuItem > matches snapshot for desktop type 1`] = `
+<a
+  class="rounded-xl border-2 border-base-100 hover:bg-indigo-700 hover:text-white transition-colors ease-in-out"
+  href="/home"
+  title="Home"
+>
+  Home
+</a>
+`;
+
+exports[`MenuItem > matches snapshot for mobile type 1`] = `
+<a
+  class="block w-full border-2 rounded-xl border-indigo-700 text-center p-2"
+  href="/home"
+  title="Home"
+>
+  Home
+</a>
+`;
