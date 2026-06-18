@@ -4,7 +4,7 @@ Welcome to **Nexca**! We appreciate your interest in contributing to our project
 
 ### 1. Explore the Repository 🧭
 
-Start by visiting the [Nexca repository](https://github.com/homayounmmdy/Nexca). Look through the README, documentation, and open issues to get familiar with the project. You'll find areas where we need help, such as new features, bug fixes, or improving documentation.
+Start by visiting the [Nexca repository](https://github.com/homayounmmdy/Nexca3). Look through the README, documentation, and open issues to get familiar with the project. You'll find areas where we need help, such as new features, bug fixes, or improving documentation.
 
 ### 2. Choose an Issue 🎯
 
@@ -43,11 +43,15 @@ Now, you're ready to code! Solve the issue, add tests if necessary, and ensure y
 
 ### 6. Commit Your Changes 🔐
 
-Once you're happy with your work, commit your changes:
+Once you're happy with your work, commit your changes. To keep our commit history clean, readable, and automated, we strictly follow the **Conventional Commits** specification.
+
+👉 **Please read our [Commit Guidelines](./COMMIT_GUIDELINES.md) before committing.**
+
+Here is an example of a properly formatted commit:
 
 ```bash
 git add .
-git commit -m "Fixed bug #123 by improving X"
+git commit -m "fix(ui): resolve button alignment issue on mobile"
 ```
 
 ### 7. Push to Your Fork 🚢
@@ -70,8 +74,6 @@ Once your PR is open, the maintainers will review it. They may ask for changes o
 
 After approval, your changes will be merged into the main branch. Congrats, you're now a contributor to Nexca! 🎊
 
----
-
 Happy coding, and thank you for helping Nexca grow! 😊
 
-For more information, check out our [Nexca repository](https://github.com/homayounmmdy/Nexca).
+For more information, check out our [Nexca repository](https://github.com/homayounmmdy/Nexca3).
