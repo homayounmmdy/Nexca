@@ -4,7 +4,7 @@ import { Container } from '@/components/atoms';
 import { CTABtn } from '@/components/molecules';
 import RouteConfig from '@/config/RouteConfig';
 import SiteConfig from '@/config/site';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
       },
    };
    // Simplified decorative elements animation
-   const decorativeVariants = {
+   const decorativeVariants: Variants = {
       hidden: { opacity: 0, scale: 0.8 },
       visible: {
          opacity: 1,
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
    };
 
    // Simplified image animation
-   const imageVariants = {
+   const imageVariants: Variants = {
       hidden: { opacity: 0, x: 50 },
       visible: {
          opacity: 1,

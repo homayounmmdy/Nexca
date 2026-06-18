@@ -7,7 +7,7 @@ import { useEffect, useRef } from 'react';
  *
  * @param {function} setActiveProvinceId - A state setter function that accepts a province ID (string)
  *                                          and updates the currently active province in the parent component.
- * @returns {React.RefObject<SVGSVGElement>} A ref object that should be attached to the root SVG element
+ * @returns {React.RefObject<SVGSVGElement | null>} A ref object that should be attached to the root SVG element
  *                                           of the map in the JSX. This allows the hook to access and
  *                                           manage the SVG's child province elements.
  *
@@ -31,7 +31,7 @@ import { useEffect, useRef } from 'react';
 
 const useMapInteraction = (
    setActiveProvinceId: (id: string) => void
-): React.RefObject<SVGSVGElement> => {
+): React.RefObject<SVGSVGElement| null> => {
    const mapRef = useRef<SVGSVGElement>(null);
 
    useEffect(() => {
@@ -42,22 +42,22 @@ const useMapInteraction = (
 
       const handleClick = (e: Event) => {
          e.stopPropagation();
-         const clickedProvince = e.target as SVGAElement;
+         const clickedProvince = e.target as Element;
          const provinceID = clickedProvince.id.slice(9);
          setActiveProvinceId(provinceID);
 
-         allProvinces.forEach((province: any) => {
+         allProvinces.forEach((province) => {
             province.classList.remove('activeProvince');
          });
          clickedProvince.classList.add('activeProvince');
       };
 
-      allProvinces.forEach((province: any) => {
+      allProvinces.forEach((province) => {
          province.addEventListener('click', handleClick);
       });
 
       return () => {
-         allProvinces.forEach((province: any) => {
+         allProvinces.forEach((province) => {
             province.removeEventListener('click', () => {});
          });
       };

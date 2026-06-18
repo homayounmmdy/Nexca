@@ -1,7 +1,7 @@
 'use client';
 import { Container, PremiumBadge } from '@/components/atoms';
 import { CollapseType } from '@/types/entities';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import React, { useState } from 'react';
 import Collapse from './Collapse';
 
@@ -22,7 +22,7 @@ const FQAs: React.FC = () => {
       },
    };
 
-   const itemVariants = {
+   const itemVariants: Variants = {
       hidden: { opacity: 0, y: 30 },
       visible: {
          opacity: 1,
@@ -34,7 +34,7 @@ const FQAs: React.FC = () => {
       },
    };
 
-   const headerVariants = {
+   const headerVariants: Variants = {
       hidden: { opacity: 0, y: -20 },
       visible: {
          opacity: 1,
@@ -46,7 +46,7 @@ const FQAs: React.FC = () => {
       },
    };
 
-   const backgroundVariants = {
+   const backgroundVariants: Variants = {
       hidden: { scale: 0.95, opacity: 0 },
       visible: {
          scale: 1,
@@ -102,8 +102,8 @@ const FQAs: React.FC = () => {
                viewport={{ once: true }}
             >
                {/* Gradient border effect */}
-               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-indigo-500/20 p-[1px]">
-                  <div className="h-full w-full rounded-3xl bg-gradient-to-br from-indigo-900/80 via-indigo-800/80 to-purple-900/80 backdrop-blur-sm" />
+               <div className="absolute inset-0 rounded-3xl bg-linear-to-r from-indigo-500/20 via-purple-500/20 to-indigo-500/20 p-[1px]">
+                  <div className="h-full w-full rounded-3xl bg-linear-to-br from-indigo-900/80 via-indigo-800/80 to-purple-900/80 backdrop-blur-sm" />
                </div>
 
                <div className="relative z-10 p-3 md:px-8  sm:px-12 lg:px-16">

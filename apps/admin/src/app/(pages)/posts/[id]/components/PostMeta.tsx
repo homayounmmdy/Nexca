@@ -1,8 +1,9 @@
 import { FormatTime } from '@/components/molecules';
 import SiteConfig from '@/config/site';
 import { CategoryType } from '@/types/CashTypes';
+import { ParamValue } from 'next/dist/server/request/params';
 
-const PostMeta = ({ post, slug }: { post: any; slug: string | string[] }) => {
+const PostMeta = ({ post, slug }: { post: any; slug: ParamValue }) => {
    const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
    const title = post.title.slice(0, 60);

@@ -1,9 +1,9 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { FeaturesType } from '../types';
 
 const FeatureCard = ({ data }: { data: FeaturesType }) => {
-   const item = {
+   const item: Variants = {
       hidden: {
          opacity: 0,
          y: 60,

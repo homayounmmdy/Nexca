@@ -20,7 +20,7 @@ const slugify = (title: string) =>
 
 const Post: React.FC = () => {
    const router = useRouter();
-   const { id, slug } = useParams(); // Get `id` and `slug` from the URL
+   const { id, slug } = useParams(); 
 
    const { data: post, isLoading, isError } = useSinglePost(id);
 

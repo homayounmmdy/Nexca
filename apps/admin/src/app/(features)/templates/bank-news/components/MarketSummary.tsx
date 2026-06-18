@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { FiBarChart } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { SectionController } from '@/util/controller/sectionsController';
 import useGetSection from '@/hooks/useGetSection';
 import { POSTS_QUERY_KEY } from '@/config/Constants';
@@ -9,7 +9,7 @@ import { PostsCashType } from '@/types/CashTypes';
 import BulletPost from '../../(components)/BulletPost';
 
 const MarketSummary = () => {
-   const itemVariants = {
+   const itemVariants: Variants = {
       hidden: { opacity: 0, y: 20 },
       visible: {
          opacity: 1,

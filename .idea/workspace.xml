@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="557ceb77-3352-4a63-a344-1791bc79c19b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/apps/admin/next-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/next-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/admin/src/app/api/adv/img/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/app/api/adv/img/[id]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/admin/src/app/api/adv/img/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/app/api/adv/img/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/admin/src/app/api/comments/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/app/api/comments/[id]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/Collapse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/Collapse.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/FAQs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/FAQs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/FeatureCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/FeatureCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/PriceList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/PriceList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/TechStacks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/app/(features)/(landing page)/components/TechStacks.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
       <workItem from="1780577524178" duration="6000" />
       <workItem from="1781784522477" duration="297000" />
       <workItem from="1781786372658" duration="827000" />
-      <workItem from="1781792237594" duration="466000" />
+      <workItem from="1781792237594" duration="1655000" />
     </task>
     <servers />
   </component>

@@ -27,13 +27,12 @@ export async function GET(
  *
  * @param {NextRequest} req - The incoming HTTP request containing the updated post data.
  * @param {{ params: Promise<{ id: string }> }} context - Route context containing the post ID.
- * @param {string} context.params.id - The unique identifier of the post to update.
  */
 export async function PUT(
    req: NextRequest,
    { params }: { params: Promise<{ id: string }> }
 ) {
-   const { id } = params;
+   const { id } = await params;
    const handler = new RequestHandler(PostModel, PostsCash);
    return handler.PUT(id, req, 'Post Update Successfully');
 }
@@ -45,13 +44,12 @@ export async function PUT(
  *
  * @param {NextRequest} req - The incoming HTTP request.
  * @param {{ params: Promise<{ id: string }> }} context - Route context containing the post ID.
- * @param {string} context.params.id - The unique identifier of the post to delete.
  */
 export async function DELETE(
    req: NextRequest,
    { params }: { params: Promise<{ id: string }> }
 ) {
-   const { id } = params;
+   const { id } = await params;
    const handler = new RequestHandler(PostModel, PostsCash);
    return handler.DELETE(id, 'Post Deleted successfully');
 }

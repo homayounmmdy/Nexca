@@ -21,7 +21,7 @@ const PriceList = () => {
    const titleInView = useInView(titleRef, { once: true, amount: 0.5 });
 
    return (
-      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <div className="bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
          {/* Animated background elements */}
          <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
@@ -49,7 +49,7 @@ const PriceList = () => {
 
          {/* Gradient orbs */}
          <motion.div
-            className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-full blur-3xl"
+            className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-linear-to-r from-purple-600/20 to-indigo-600/20 rounded-full blur-3xl"
             animate={{
                x: [0, 100, 0],
                y: [0, -50, 0],
@@ -58,7 +58,7 @@ const PriceList = () => {
             transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
          />
          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-pink-600/20 to-purple-600/20 rounded-full blur-3xl"
+            className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-linear-to-r from-pink-600/20 to-purple-600/20 rounded-full blur-3xl"
             animate={{
                x: [0, -100, 0],
                y: [0, 50, 0],
@@ -91,7 +91,7 @@ const PriceList = () => {
                      </motion.h2>
 
                      <motion.div
-                        className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mb-6 md:mb-8"
+                        className="w-24 h-1 bg-linear-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mb-6 md:mb-8"
                         initial={{ width: 0 }}
                         animate={titleInView ? { width: 96 } : {}}
                         transition={{

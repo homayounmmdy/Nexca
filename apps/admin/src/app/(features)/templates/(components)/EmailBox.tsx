@@ -1,5 +1,5 @@
 import EmailListForm from '@/components/organisms/EmailListForm';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import React from 'react';
 import { AllowedColors } from '@/types/AllowedOptions';
 
@@ -25,7 +25,7 @@ const EmailBox = ({
          },
       },
    };
-   const itemVariants = {
+   const itemVariants: Variants = {
       hidden: { y: 20, opacity: 0 },
       visible: {
          y: 0,

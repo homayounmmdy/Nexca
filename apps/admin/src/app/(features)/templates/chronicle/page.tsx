@@ -1,6 +1,6 @@
 'use client';
 import EmailListForm from '@/components/organisms/EmailListForm';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import EmailBox from '../(components)/EmailBox';
 import ChronicleHero from './components/ChronicleHero';
 import ChronicleTeleType from './components/ChronicleTeleType';
@@ -8,7 +8,7 @@ import LatestReports from './components/LatestReports';
 import MostReadToday from './components/MostReadToday';
 
 const TheChronicle = () => {
-   const containerVariants = {
+   const containerVariants : Variants = {
       hidden: { opacity: 0 },
       visible: {
          opacity: 1,
@@ -18,7 +18,7 @@ const TheChronicle = () => {
       },
    };
 
-   const itemVariants = {
+   const itemVariants: Variants = {
       hidden: { opacity: 0, y: 20 },
       visible: {
          opacity: 1,

@@ -3,14 +3,14 @@ import { PLAY_LIST } from '@/config/Constants';
 import useGetSection from '@/hooks/useGetSection';
 import { PostsCashType } from '@/types/CashTypes';
 import { SectionController } from '@/util/controller/sectionsController';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import MusicCard from './MusicCard';
 import PlayListLoading from './loading/PlayListLoading';
 
 const PlayList = () => {
    const { data, loading } = useGetSection(PLAY_LIST, -4, 26);
 
-   const containerVariants = {
+   const containerVariants: Variants = {
       hidden: { opacity: 0 },
       visible: {
          opacity: 1,

@@ -4,7 +4,7 @@ import useGetSection from '@/hooks/useGetSection';
 import { PostsCashType } from '@/types/CashTypes';
 import { SectionController } from '@/util/controller/sectionsController';
 import { postLinkGenerator } from '@/util/ServerUtil';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import MusicPodcastLoading from './loading/MusicPodcastLoading';
@@ -12,7 +12,7 @@ import MusicPodcastLoading from './loading/MusicPodcastLoading';
 const MusicPodcast = () => {
    const { data, loading } = useGetSection(PODCAST_MUSIC, -3, 27);
 
-   const containerVariants = {
+   const containerVariants: Variants = {
       hidden: { opacity: 0 },
       visible: {
          opacity: 1,

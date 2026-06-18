@@ -1,7 +1,7 @@
 'use client';
 import { Input } from '@/components/atoms';
 import { CollapseType } from '@/types/entities';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, Variants } from 'framer-motion';
 import React from 'react';
 import { IoChevronDownCircleOutline } from 'react-icons/io5';
 
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Collapse: React.FC<Props> = ({ data, isOpen, onToggle }: Props) => {
-   const contentVariants = {
+   const contentVariants: Variants = {
       closed: {
          opacity: 0,
          height: 0,
@@ -36,7 +36,7 @@ const Collapse: React.FC<Props> = ({ data, isOpen, onToggle }: Props) => {
       open: { rotate: 180 },
    };
 
-   const cardVariants = {
+   const cardVariants: Variants = {
       hover: {
          scale: 1.02,
          boxShadow: '0 20px 40px rgba(99, 102, 241, 0.15)',

@@ -3,11 +3,11 @@ import { MOST_READ_TODAY } from '@/config/Constants';
 import useGetSection from '@/hooks/useGetSection';
 import { PostsCashType } from '@/types/CashTypes';
 import { SectionController } from '@/util/controller/sectionsController';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { IoIosTrendingUp } from 'react-icons/io';
 
 const MostReadToday = () => {
-   const itemVariants = {
+   const itemVariants: Variants = {
       hidden: { opacity: 0, y: 20 },
       visible: {
          opacity: 1,
