@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="557ceb77-3352-4a63-a344-1791bc79c19b" name="Changes" comment="" />
+    <list default="true" id="557ceb77-3352-4a63-a344-1791bc79c19b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lintstagedrc" beforeDir="false" afterPath="$PROJECT_DIR$/.lintstagedrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/next-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/next-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/src/models/ConnetDB.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/src/models/ConnetDB.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +20,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="3EflULpp78he45znCMnoOYjDXIy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,8 +33,13 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "mono-repo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\NoteBook\\projects\\finishied\\nexca3\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -44,7 +59,12 @@
       <option name="presentableId" value="Default" />
       <updated>1780577521842</updated>
       <workItem from="1780577524178" duration="6000" />
+      <workItem from="1781784522477" duration="297000" />
+      <workItem from="1781786372658" duration="827000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

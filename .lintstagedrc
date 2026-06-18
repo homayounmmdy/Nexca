@@ -1,5 +1,4 @@
 {
   "*.{js,jsx,ts,tsx,css}": [
-    "eslint --fix"
   ]
 }
