@@ -1,21 +1,21 @@
 import { ReleaseModel } from '@/models';
 import RequestHandler from '@/util/handler/RequestHandler';
 import ReleaseCash from '@/cash/ReleaseCash';
+import { NextRequest } from 'next/server';
 
 /**
  * GET /api/release/[id]
  *
  * Retrieves a single release record by its unique identifier.
  *
- * @param {Request} req - The incoming HTTP request.
- * @param {{ params: { id: string } }} context - Route context containing the release ID.
- * @param {string} context.params.id - The unique identifier of the release record to retrieve.
+ * @param {NextRequest} req - The incoming HTTP request.
+ * @param {{ params: Promise<{ id: string }> }} context - Route context containing the release ID.
  */
 export async function GET(
-   req: Request,
-   { params }: { params: { id: string } }
+   req: NextRequest,
+   { params }: { params: Promise<{ id: string }> }
 ) {
-   const { id } = params;
+   const { id } = await params;
    const handler = new RequestHandler(ReleaseModel, ReleaseCash);
    return handler.Get(id);
 }
@@ -25,15 +25,14 @@ export async function GET(
  *
  * Updates an existing release record identified by its ID with the data provided in the request body.
  *
- * @param {Request} req - The incoming HTTP request containing the updated release data.
- * @param {{ params: { id: string } }} context - Route context containing the release ID.
- * @param {string} context.params.id - The unique identifier of the release record to update.
+ * @param {NextRequest} req - The incoming HTTP request containing the updated release data.
+ * @param {{ params: Promise<{ id: string }> }} context - Route context containing the release ID.
  */
 export async function PUT(
-   req: Request,
-   { params }: { params: { id: string } }
+   req: NextRequest,
+   { params }: { params: Promise<{ id: string }> }
 ) {
-   const { id } = params;
+   const { id } = await params;
    const handler = new RequestHandler(ReleaseModel, ReleaseCash);
    return handler.PUT(id, req, 'Release Update Successfully');
 }
@@ -43,15 +42,14 @@ export async function PUT(
  *
  * Deletes a release record by its unique identifier.
  *
- * @param {Request} req - The incoming HTTP request.
- * @param {{ params: { id: string } }} context - Route context containing the release ID.
- * @param {string} context.params.id - The unique identifier of the release record to delete.
+ * @param {NextRequest} req - The incoming HTTP request.
+ * @param {{ params: Promise<{ id: string }> }} context - Route context containing the release ID.
  */
 export async function DELETE(
-   req: Request,
-   { params }: { params: { id: string } }
+   req: NextRequest,
+   { params }: { params: Promise<{ id: string }> }
 ) {
-   const { id } = params;
+   const { id } = await params;
    const handler = new RequestHandler(ReleaseModel, ReleaseCash);
    return handler.DELETE(id, 'Release Deleted Successfully');
 }

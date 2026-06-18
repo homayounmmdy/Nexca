@@ -1,6 +1,7 @@
 import ContactsCash from '@/cash/ContactsCash';
 import { ContactsModel } from '@/models';
 import RequestHandler from '@/util/handler/RequestHandler';
+import { NextRequest } from 'next/server';
 
 /**
  * DELETE /api/contactus/[id]
@@ -8,14 +9,13 @@ import RequestHandler from '@/util/handler/RequestHandler';
  * Deletes a contact message by its unique identifier.
  *
  * @param {Request} req - The incoming HTTP request.
- * @param {{ params: { id: string } }} context - Route context containing the contact message ID.
- * @param {string} context.params.id - The unique identifier of the contact message to delete.
+ * @param {{ params: Promise<{ id: string }> }} context - Route context containing the contact message ID.
  */
 export async function DELETE(
-   req: Request,
-   { params }: { params: { id: string } }
+   req: NextRequest,
+   { params }: { params: Promise<{ id: string }> }
 ) {
-   const { id } = params;
+   const { id } = await params;
    const handler = new RequestHandler(ContactsModel, ContactsCash);
    return handler.DELETE(id, 'Message Deleted successfully');
 }

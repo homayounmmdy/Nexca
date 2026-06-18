@@ -1,21 +1,21 @@
 import RequestHandler from '@/util/handler/RequestHandler';
 import ImgAdvCash from '@/cash/ImgAdvCash';
 import { ImgAdvModel } from '@/models';
+import { NextRequest } from 'next/server';
 
 /**
  * GET /api/adv/img/[id]
  *
  * Retrieves a single image advertisement by its unique identifier.
  *
- * @param {Request} req - The incoming HTTP request (unused but required by Next.js App Router).
- * @param {{ params: { id: string } }} context - Route context containing the advertisement ID.
- * @param {string} context.params.id - The unique identifier of the image advertisement to retrieve.
+ * @param {NextRequest} req - The incoming HTTP request (unused but required by Next.js App Router).
+ * @param {{ params: Promise<{ id: string }> }} context - Route context containing the advertisement ID.
  */
 export async function GET(
-   req: Request,
-   { params }: { params: { id: string } }
+   req: NextRequest,
+   { params }: { params: Promise<{ id: string }> }
 ) {
-   const { id } = params;
+   const { id } = await params;
    const handler = new RequestHandler(ImgAdvModel, ImgAdvCash);
    return handler.Get(id);
 }
@@ -25,15 +25,14 @@ export async function GET(
  *
  * Updates an existing image advertisement identified by its ID with the data provided in the request body.
  *
- * @param {Request} req - The incoming HTTP request containing the updated advertisement data.
- * @param {{ params: { id: string } }} context - Route context containing the advertisement ID.
- * @param {string} context.params.id - The unique identifier of the image advertisement to update.
+ * @param {NextRequest} req - The incoming HTTP request containing the updated advertisement data.
+ * @param {{ params: Promise<{ id: string }> }} context - Route context containing the advertisement ID.
  */
 export async function PUT(
-   req: Request,
-   { params }: { params: { id: string } }
+   req: NextRequest,
+   { params }: { params: Promise<{ id: string }> }
 ) {
-   const { id } = params;
+   const { id } =await  params;
    const handler = new RequestHandler(ImgAdvModel, ImgAdvCash);
    return handler.PUT(id, req, 'Ads Update Successfully');
 }
@@ -43,15 +42,14 @@ export async function PUT(
  *
  * Deletes an image advertisement by its unique identifier.
  *
- * @param {Request} req - The incoming HTTP request (unused but required by Next.js App Router).
- * @param {{ params: { id: string } }} context - Route context containing the advertisement ID.
- * @param {string} context.params.id - The unique identifier of the image advertisement to delete.
+ * @param {NextRequest} req - The incoming HTTP request (unused but required by Next.js App Router).
+ * @param {{ params: Promise<{ id: string }> }} context - Route context containing the advertisement ID.
  */
 export async function DELETE(
-   req: Request,
-   { params }: { params: { id: string } }
+   req: NextRequest,
+   { params }: { params: Promise<{ id: string }> }
 ) {
-   const { id } = params;
+   const { id } = await params;
    const handler = new RequestHandler(ImgAdvModel, ImgAdvCash);
    return handler.DELETE(id, 'Ads Deleted successfully');
 }
