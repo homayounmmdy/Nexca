@@ -5,7 +5,8 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": ["API_URL*", "NEXT_PUBLIC_API_URL", "MONGODB_URI", "NEXT_PUBLIC_PASSWORD" , "NEXT_PUBLIC_USERNAME", "NEXT_PUBLIC_STATUS", "NEXT_PUBLIC_MASTER_EDITOR_KEY"] 
     },
     "lint": {
       "dependsOn": ["^lint"]
