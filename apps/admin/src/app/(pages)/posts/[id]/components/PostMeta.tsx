@@ -1,5 +1,5 @@
 import { FormatTime } from '@/components/molecules';
-import SiteConfig from '@/config/site';
+import SiteConfig from '@nexca/config';
 import { CategoryType } from '@/types/CashTypes';
 import { ParamValue } from 'next/dist/server/request/params';
 

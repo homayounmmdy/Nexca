@@ -9,7 +9,7 @@ import {
   VerticalPostsSec,
 } from "@/components/organisms";
 import MostTab from "@/components/organisms/MostTab";
-import SiteConfig from "@/config/site";
+import SiteConfig from "@nexca/config";
 import { SectionController } from "@/util/controller/sectionsController";
 import { Metadata } from "next";
 import React from "react";

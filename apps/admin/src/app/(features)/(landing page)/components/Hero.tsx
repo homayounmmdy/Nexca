@@ -3,7 +3,7 @@ import HeroImage from '@/../public/static/Image/Hero.webp';
 import { Container } from '@/components/atoms';
 import { CTABtn } from '@/components/molecules';
 import RouteConfig from '@/config/RouteConfig';
-import SiteConfig from '@/config/site';
+import SiteConfig from '@nexca/config';
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';

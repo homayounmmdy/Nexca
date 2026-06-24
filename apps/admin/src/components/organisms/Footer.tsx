@@ -1,5 +1,5 @@
 import { Container, SiteNameLink } from '@/components/atoms';
-import SiteConfig from '@/config/site';
+import SiteConfig from '@nexca/config';
 import CopyRight from './CopyRight';
 import EmailListForm from './EmailListForm';
 import FooterLinks from './FooterLinks';

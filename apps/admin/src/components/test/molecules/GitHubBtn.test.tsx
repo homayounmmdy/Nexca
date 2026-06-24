@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import { GitHubBtn } from '@/components/molecules';
-import SiteConfig from '@/config/site';
+import SiteConfig from '@nexca/config';
 
 describe('GitHubBtn', () => {
    it('should render the correct link with default props', () => {

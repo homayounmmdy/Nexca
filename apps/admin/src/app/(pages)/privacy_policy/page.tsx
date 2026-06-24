@@ -1,4 +1,4 @@
-import SiteConfig from '@/config/site';
+import SiteConfig from '@nexca/config';
 import React from 'react';
 
 const PrivicyPolicyPage: React.FC = () => {

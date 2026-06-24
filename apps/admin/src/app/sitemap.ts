@@ -1,4 +1,4 @@
-import SiteConfig from '@/config/site';
+import SiteConfig from '@nexca/config';
 
 /**
  * Generates a sitemap for the website.

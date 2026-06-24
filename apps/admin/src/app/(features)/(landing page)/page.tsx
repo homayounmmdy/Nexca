@@ -1,4 +1,4 @@
-import SiteConfig from '@/config/site';
+import SiteConfig from '@nexca/config';
 import { Metadata } from 'next';
 import React from 'react';
 const Hero = React.lazy(() => import('./components/Hero'));

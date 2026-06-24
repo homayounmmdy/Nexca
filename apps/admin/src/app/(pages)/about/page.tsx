@@ -1,4 +1,4 @@
-import SiteConfig from '@/config/site';
+import SiteConfig from '@nexca/config';
 import Link from 'next/link';
 import { FaRocket, FaHandshake, FaCode, FaEnvelope } from 'react-icons/fa';
 import {

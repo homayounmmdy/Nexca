@@ -1,10 +1,12 @@
 {
-  "name": "my-cms-monorepo",
+  "name": "nexca",
   "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
+    "description": "Experience the power of an open-source CMS built with Next.js. Effortlessly manage content, streamline workflows, and connect with your audience—perfect for agencies, bloggers, and creators.",
+
   "scripts": {
     "dev:admin": "npm run dev --workspace=apps/admin",
     "dev:info": "npm run dev --workspace=apps/info",
@@ -24,7 +26,6 @@
     "node": ">=18"
   },
   "packageManager": "npm@10.5.0",
-  "description": "This Turborepo starter is maintained by the Turborepo core team.",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {

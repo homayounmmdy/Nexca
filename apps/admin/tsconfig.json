@@ -29,7 +29,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "../../packages/config/site-config.ts",
+    "../../packages/config/site.test.tsx"
   ],
   "exclude": ["node_modules"]
 }

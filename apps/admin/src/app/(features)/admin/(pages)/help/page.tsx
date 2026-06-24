@@ -1,5 +1,5 @@
 import RouteConfig from '@/config/RouteConfig';
-import SiteConfig from '@/config/site';
+import SiteConfig from '@nexca/config';
 import Link from 'next/link';
 import {
    FiArrowRight,
