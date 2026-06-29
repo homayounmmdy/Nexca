@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, RenderResult, screen } from '@testing-library/react';
-import  Container  from './Container';
+import  Container  from '../Container';
 import { describe, expect, it } from 'vitest';
 
 describe('Container Component', () => {

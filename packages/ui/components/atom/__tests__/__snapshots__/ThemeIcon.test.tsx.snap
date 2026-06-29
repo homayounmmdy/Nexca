@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ThemeIcon > matches snapshot 1`] = `
+<div>
+  <div
+    class="bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm"
+    data-testid="theme-icon"
+    data-theme="corporate"
+  >
+    <div
+      class="bg-base-content size-1 rounded-full"
+      data-testid="theme-icon-dot"
+    />
+     
+    <div
+      class="bg-primary size-1 rounded-full"
+      data-testid="theme-icon-dot"
+    />
+     
+    <div
+      class="bg-secondary size-1 rounded-full"
+      data-testid="theme-icon-dot"
+    />
+     
+    <div
+      class="bg-accent size-1 rounded-full"
+      data-testid="theme-icon-dot"
+    />
+  </div>
+</div>
+`;

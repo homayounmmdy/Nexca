@@ -2,8 +2,8 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Fa0 } from "react-icons/fa6";
 import { describe, expect, it, vi } from "vitest";
-import { ButtonType } from "../../types";
-import Button from "../atom/Button";
+import { ButtonType } from "../../../types";
+import Button from "../Button";
 
 describe("Button component", () => {
   const defaultProps: ButtonType = {
