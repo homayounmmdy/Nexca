@@ -2,8 +2,8 @@
 import { HeaderModeType } from "@/types/entities";
 import classNames from "classnames";
 import { useState } from "react";
-import { MenuChildren } from "../../../../molecules";
-import { HeaderNavLink } from "../atoms";
+import  HeaderNavLink  from "../atom/HeaderNavLink";
+import { MenuChildren } from "../molecules";
 
 type MenuItemType = {
   name: string;

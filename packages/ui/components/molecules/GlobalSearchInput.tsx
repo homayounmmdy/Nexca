@@ -1,7 +1,7 @@
 'use client';
 import { FormEvent, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
-import Input from '../atoms/Input';
+import Input from '../atom/Input';
 
 const GlobalSearchInput = ({
    className,

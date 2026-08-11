@@ -1,6 +1,6 @@
 import { SetStateAction } from 'react';
-import Button from '../atoms/Button';
-import ThemeIcon from '../atoms/ThemeIcon';
+import Button from '../atom/Button';
+import ThemeIcon from '../atom/ThemeIcon';
 
 const ThemeFiled = ({
    Theme,

@@ -1,8 +1,7 @@
 "use client";
 import { HeaderMenuConfigType } from "@/types/entities";
-import { MenuChildren } from "../../../../molecules";
-import { HeaderNavLink } from "../atoms";
-import MapMenu from "./MapMenu";
+import  HeaderNavLink  from "../atom/HeaderNavLink";
+import { MenuChildren } from "../molecules";
 import ServicesMenu from "./ServicesMenu";
 
 const DesktopMenu = ({ nav }: { nav: HeaderMenuConfigType[] }) => {
@@ -24,7 +23,7 @@ const DesktopMenu = ({ nav }: { nav: HeaderMenuConfigType[] }) => {
 
       <ServicesMenu />
 
-      <MapMenu />
+      {/* <MapMenu /> */}
     </ul>
   );
 };

@@ -2,7 +2,6 @@
 // simple components composed of multiple atoms that works together
 
 export { default as CTABtn } from './CTABtn';
-export { default as DeleteBtn } from './DeleteBtn';
 export { default as FullHoverAnimation } from './FullHoverAnimation';
 export { default as GitHubBtn } from './GitHubBtn';
 export { default as GlobalSearchInput } from './GlobalSearchInput';

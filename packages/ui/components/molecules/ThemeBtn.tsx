@@ -4,7 +4,7 @@ import RouteConfig from '@/config/RouteConfig';
 import { ThemesConfig } from '@/config/themes';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { ThemeIcon } from '../atoms';
+import  ThemeIcon  from '../atom/ThemeIcon';
 import ThemeFiled from './ThemeFiled';
 
 type ThemeSetting = {
