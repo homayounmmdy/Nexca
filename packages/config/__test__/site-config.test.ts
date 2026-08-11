@@ -1,4 +1,4 @@
-import SiteConfig from "./site-config";
+import SiteConfig from "../site-config";
 
 describe("SiteConfig", () => {
   const originalEnv = process.env;

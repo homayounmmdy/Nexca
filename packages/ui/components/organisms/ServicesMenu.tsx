@@ -1,6 +1,6 @@
 'use client';
-import { SERVICES_API_URL } from '@/config/apiConstants';
-import { SERVICES_QUERY_KEY } from '@/config/Constants';
+import  SERVICES_API_URL  from '@nexca/config';
+import  SERVICES_QUERY_KEY from '@nexca/config';
 import useFetch from '@/hooks/useFetch';
 import { ServicesCashType } from '@/types/CashTypes';
 import { HeaderModeType } from '@/types/entities';

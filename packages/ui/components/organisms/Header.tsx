@@ -1,6 +1,8 @@
 "use client";
-import { DEV_MODE } from "@/config/Constants";
-import HeaderMenuConfig from "@/config/HeaderMenuConfig";
+import {
+  default as DEV_MODE,
+  default as HeaderMenuConfig,
+} from "@nexca/config";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Container from "../atom/Container";
