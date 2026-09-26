@@ -10,6 +10,7 @@
   "scripts": {
     "dev:admin": "npm run dev --workspace=apps/admin",
     "dev:info": "npm run dev --workspace=apps/info",
+    "dev:marketing": "npm run dev --workspace=apps/marketing",
     "build": "npm run build --workspaces --if-present",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
