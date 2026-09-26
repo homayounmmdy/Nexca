@@ -21,7 +21,7 @@ const FormatTime = ({
     return date.toLocaleString("en-GB", options);
   };
 
-  return <>{formatDate(timestamp, options)}</>;
+  return formatDate(timestamp, options);
 };
 
 export default FormatTime;
