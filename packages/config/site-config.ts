@@ -1,4 +1,4 @@
-const API_URL = process.env.API_URL || 'https://nexca.vercel.app';
+const API_URL = 'https://nexca.vercel.app';
 
 const SiteConfig = {
    name: 'Nexca',
