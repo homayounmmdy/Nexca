@@ -1,6 +1,6 @@
+import SiteConfig from "@nexca/config";
 import Link from "next/link";
 import React from "react";
-import SiteConfig from "@nexca/config";
 import Button from "../atoms/Button";
 
 interface GitHubBtnProps {

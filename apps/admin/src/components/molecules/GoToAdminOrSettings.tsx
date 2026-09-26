@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
-import RouteConfig from '../../config/RouteConfig';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { FaHome } from 'react-icons/fa';
-import { IoMdSettings } from 'react-icons/io';
-import { Button } from '../atoms';
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React from "react";
+import { FaHome } from "react-icons/fa";
+import { IoMdSettings } from "react-icons/io";
+import RouteConfig from "../../config/RouteConfig";
+import { Button } from "../atoms";
 
 /**
  * A navigation toggle component that conditionally renders a link to either the admin dashboard
@@ -26,33 +26,33 @@ import { Button } from '../atoms';
  * @returns {React.JSX.Element} A clickable button wrapped in a Next.js `Link` that toggles between admin and settings views.
  */
 const GoToAdminOrSettings: React.FC = (): React.JSX.Element => {
-   const pathname = usePathname();
+  const pathname = usePathname();
 
-   if (pathname === RouteConfig.admin.settings.base) {
-      return (
-         <Link
-            href={RouteConfig.admin.base}
-            title="admin"
-            aria-label="Link to admin page"
-         >
-            <Button>
-               <FaHome data-testid="homeIcon" />
-            </Button>
-         </Link>
-      );
-   } else {
-      return (
-         <Link
-            href={RouteConfig.admin.settings.base}
-            title="setting"
-            aria-label="Link to setting page"
-         >
-            <Button>
-               <IoMdSettings data-testid="settingIcon" />
-            </Button>
-         </Link>
-      );
-   }
+  if (pathname === RouteConfig.admin.settings.base) {
+    return (
+      <Link
+        href={RouteConfig.admin.base}
+        title="admin"
+        aria-label="Link to admin page"
+      >
+        <Button>
+          <FaHome data-testid="homeIcon" />
+        </Button>
+      </Link>
+    );
+  } else {
+    return (
+      <Link
+        href={RouteConfig.admin.settings.base}
+        title="setting"
+        aria-label="Link to setting page"
+      >
+        <Button>
+          <IoMdSettings data-testid="settingIcon" />
+        </Button>
+      </Link>
+    );
+  }
 };
 
 export default GoToAdminOrSettings;
