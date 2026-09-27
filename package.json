@@ -5,8 +5,7 @@
     "apps/*",
     "packages/*"
   ],
-    "description": "Experience the power of an open-source CMS built with Next.js. Effortlessly manage content, streamline workflows, and connect with your audience—perfect for agencies, bloggers, and creators.",
-
+  "description": "Experience the power of an open-source CMS built with Next.js. Effortlessly manage content, streamline workflows, and connect with your audience—perfect for agencies, bloggers, and creators.",
   "scripts": {
     "dev:admin": "npm run dev --workspace=apps/admin",
     "dev:info": "npm run dev --workspace=apps/info",
@@ -202,6 +201,7 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-is": "^16.13.1",
+    "react-router": "^8.4.0",
     "reflect.getprototypeof": "^1.0.10",
     "regexp.prototype.flags": "^1.5.4",
     "resolve": "^2.0.0-next.7",
