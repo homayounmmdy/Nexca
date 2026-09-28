@@ -46,3 +46,10 @@ export type InputType = {
    checked?: boolean;
    icon?: JSX.Element;
 } & React.InputHTMLAttributes<HTMLInputElement>;
+
+export type TextareaType = {
+   color: `textarea-${AllowedColors}` | null;
+   label?: string;
+   style?: string;
+   icon?: JSX.Element;
+} & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
