@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 export type AllowedColors =
   | "primary"
   | "secondary"
@@ -35,3 +37,12 @@ export type ButtonType = {
    */
   removeDefaultStyle?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export type InputType = {
+   color?: `input-${AllowedColors}`;
+   defaultChecked?: boolean;
+   label?: string;
+   style?: string;
+   checked?: boolean;
+   icon?: JSX.Element;
+} & React.InputHTMLAttributes<HTMLInputElement>;
