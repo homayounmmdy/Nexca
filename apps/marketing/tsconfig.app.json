@@ -22,5 +22,10 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "../../packages/marketing-pages/pages/about/components/SectionHeader.tsx",
+    "../../packages/marketing-pages/pages/about/components/TechCard.tsx",
+    "../../packages/marketing-pages/pages/about/about.ts"
+  ]
 }

@@ -6,3 +6,9 @@ export interface TechItem {
   Icon: IconType;
   iconClassName?: string;
 }
+
+export interface SectionHeaderProps {
+  icon: IconType;
+  title: string;
+  className?: string;
+}

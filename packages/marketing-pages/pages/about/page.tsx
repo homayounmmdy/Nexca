@@ -8,10 +8,9 @@ import {
   SiVercel,
 } from "react-icons/si";
 import { Link } from "react-router";
-
-import { SectionHeader } from "../components/SectionHeader";
-import { TechCard } from "../components/TechCard";
-import { sections, technologies } from "../static/about";
+import { SectionHeader } from "./components/SectionHeader";
+import { TechCard } from "./components/TechCard";
+import { sections, technologies } from "./content";
 
 const partnerLogos = [SiNextdotjs, SiReact, SiVercel, SiTailwindcss, SiMongodb];
 
@@ -46,9 +45,9 @@ const AboutPage = () => (
           At {SiteConfig.name}, we believe that digital sophistication should be
           accessible to all. Our mission is to democratize web publishing by
           providing powerful tools that require no coding knowledge, while
-          delivering results that exude professionalism and refinement. We're
-          committed to empowering creators with technology that works as
-          seamlessly as it looks.
+          delivering results that exude professionalism and refinement.
+          We&apos;re committed to empowering creators with technology that works
+          as seamlessly as it looks.
         </p>
       </section>
 
@@ -66,7 +65,7 @@ const AboutPage = () => (
       <section className="mb-20">
         <SectionHeader {...sections.partners} />
         <p className="text-lg mb-8">
-          We've forged strategic partnerships with industry innovators to
+          We&apos;ve forged strategic partnerships with industry innovators to
           deliver a platform that stands at the forefront of web technology.
           These collaborations allow us to offer you tools and services that are
           not just current, but visionary.
@@ -80,11 +79,11 @@ const AboutPage = () => (
 
       {/* Contact */}
       <section className="rounded-2xl bg-base-200 p-8 lg:p-12 shadow-sm">
-        <SectionHeader {...sections.contact}  />
+        <SectionHeader {...sections.contact} />
         <p className="text-lg mb-6">
           Our dedicated team of specialists is ready to assist you on your
           digital journey. Whether you have inquiries about our platform or need
-          personalized support, we're committed to providing timely and
+          personalized support, we&apos;re committed to providing timely and
           thoughtful assistance.
         </p>
       </section>

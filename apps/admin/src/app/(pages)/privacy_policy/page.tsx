@@ -1,7 +1,7 @@
-import { PrivacyPolicyPage } from "@nexca/marketing-pages";
+import { PrivacyPolicyPage  as Content } from "@nexca/marketing-pages";
 
-const PrivacyPolicy = () => {
-  return <PrivacyPolicyPage />;
+const PrivacyPolicyPage = () => {
+  return <Content />;
 };
 
-export default PrivacyPolicy;
+export default PrivacyPolicyPage;

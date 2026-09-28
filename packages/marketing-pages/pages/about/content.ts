@@ -1,4 +1,5 @@
 import type { IconType } from "react-icons";
+import { FaCode, FaEnvelope, FaHandshake, FaRocket } from "react-icons/fa";
 import {
   SiMongodb,
   SiNextdotjs,
@@ -6,8 +7,7 @@ import {
   SiTailwindcss,
   SiVercel,
 } from "react-icons/si";
-import { FaCode, FaEnvelope, FaHandshake, FaRocket } from "react-icons/fa";
-import { ClerkIcon } from '../../icons/ClerkIcon';
+import { ClerkIcon } from "../../../../apps/marketing/icons/ClerkIcon";
 
 export type SectionId = "mission" | "tech" | "partners" | "contact";
 
@@ -19,8 +19,8 @@ export interface Section {
 
 export const sections: Record<SectionId, Section> = {
   mission: { id: "mission", icon: FaRocket, title: "Our Mission" },
-  tech:    { id: "tech",    icon: FaCode,    title: "Crafted with Precision" },
-  partners:{ id: "partners",icon: FaHandshake,title: "Strategic Alliances" },
+  tech: { id: "tech", icon: FaCode, title: "Crafted with Precision" },
+  partners: { id: "partners", icon: FaHandshake, title: "Strategic Alliances" },
   contact: { id: "contact", icon: FaEnvelope, title: "Connect With Us" },
 };
 

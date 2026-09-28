@@ -1,4 +1,4 @@
-import type { TechItem } from "../types/about";
+import type { TechItem } from "../types";
 
 export const TechCard = ({
   name,

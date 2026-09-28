@@ -1,10 +1,4 @@
-import type { IconType } from "react-icons";
-
-interface SectionHeaderProps {
-  icon: IconType;
-  title: string;
-  className?: string;
-}
+import { SectionHeaderProps } from "../types";
 
 export const SectionHeader = ({
   icon: Icon,

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@source "../../../packages/marketing-pages";
 
 @plugin "daisyui" {
   themes:
