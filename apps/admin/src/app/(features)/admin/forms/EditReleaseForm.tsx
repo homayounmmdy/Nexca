@@ -1,5 +1,5 @@
 'use client';
-import { Button, Input } from '@/components/atoms';
+import { Button, Input } from '@nexca/ui';
 import { RELEASE_API_URL } from '@/config/apiConstants';
 import { ReleaseCashType } from '@/types/CashTypes';
 import FormHandler from '@/util/handler/FormHandler';

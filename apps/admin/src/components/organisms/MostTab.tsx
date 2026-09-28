@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 import { useState } from 'react';
 import LatestLinearPost from './postsSection/LatestLinearPost';
 import MostCommentedLinearPost from './postsSection/MostCommentedLinearPost';

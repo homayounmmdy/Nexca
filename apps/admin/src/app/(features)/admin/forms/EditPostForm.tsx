@@ -1,5 +1,5 @@
 'use client';
-import { Button, Input, Textarea } from '@/components/atoms';
+import { Button, Input, Textarea } from '@nexca/ui';
 import {
    POST_API_URL,
    SECTIONS_API_URL,

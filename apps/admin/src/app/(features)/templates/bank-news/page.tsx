@@ -1,5 +1,5 @@
 "use client";
-import { Container } from "@/components/atoms";
+import { Container } from '@nexca/ui';
 import { motion, Variants } from "framer-motion";
 import EmailBox from "../(components)/EmailBox";
 import LatestPosts from "../(components)/LatestPosts";

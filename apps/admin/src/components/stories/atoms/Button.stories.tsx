@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 import { IoArrowUpCircleSharp } from 'react-icons/io5';
 
 const meta = {

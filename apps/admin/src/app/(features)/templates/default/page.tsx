@@ -1,5 +1,5 @@
 import { LinearAds } from "@/components/ads";
-import { Container } from "@/components/atoms";
+import { Container } from '@nexca/ui';
 import {
   Banner,
   PostsSec,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '@/components/atoms';
+import { Container } from '@nexca/ui';
 import MapWrapper from './components/MapWrapper';
 import WorldMap from './components/WorldMap';
 import ListOfCountries from './components/ListOfCountries';

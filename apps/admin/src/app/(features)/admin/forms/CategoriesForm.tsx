@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Input } from '@/components/atoms';
+import { Button, Input } from '@nexca/ui';
 import FormHandler from '@/util/handler/FormHandler';
 import { useState } from 'react';
 

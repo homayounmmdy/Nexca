@@ -1,6 +1,6 @@
 'use client';
 import { ErrorText, Spinner } from '@/components/atoms';
-import { Button } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 import { DeleteBtn } from '@/components/molecules';
 import { TEXTADV_API_URL } from '@/config/apiConstants';
 import { ALL_TEXTADV_QUERY_KEY } from '@/config/Constants';

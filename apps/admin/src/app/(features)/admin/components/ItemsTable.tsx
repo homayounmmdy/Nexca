@@ -1,4 +1,4 @@
-import { Button } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 import { DeleteBtn } from '@/components/molecules';
 import RouteConfig from '@/config/RouteConfig';
 import { PostsCashType } from '@/types/CashTypes';

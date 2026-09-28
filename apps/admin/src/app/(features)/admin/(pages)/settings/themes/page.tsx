@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 import { ThemeFiled } from '@/components/molecules';
 import { DARKTHEME } from '@/config/Constants';
 import { ThemesConfig } from '@/config/themes';

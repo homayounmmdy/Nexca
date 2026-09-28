@@ -1,5 +1,5 @@
 'use client';
-import { Button, Input, Textarea } from '@/components/atoms';
+import { Button, Input, Textarea } from '@nexca/ui';
 import { SERVICES_API_URL } from '@/config/apiConstants';
 import { SERVICES_QUERY_KEY } from '@/config/Constants';
 import useFetch from '@/hooks/useFetch';

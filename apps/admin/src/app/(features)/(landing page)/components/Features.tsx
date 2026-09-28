@@ -1,5 +1,5 @@
 'use client';
-import { Container } from '@/components/atoms';
+import { Container } from '@nexca/ui';
 import { FullHoverAnimation } from '@/components/molecules';
 import { motion, useReducedMotion } from 'framer-motion';
 import React from 'react';

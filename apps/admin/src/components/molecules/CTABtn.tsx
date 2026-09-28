@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { IoArrowUpCircleSharp } from "react-icons/io5";
-import { Button } from "../atoms";
+import { Button } from '@nexca/ui';
 
 /**
  * A visually enhanced call-to-action (CTA) button component that wraps a link with animated styling.

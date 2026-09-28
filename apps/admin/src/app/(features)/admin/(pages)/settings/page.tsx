@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 import { adminPages } from '@/config/adminPage';
 import { useState, useEffect } from 'react';
 

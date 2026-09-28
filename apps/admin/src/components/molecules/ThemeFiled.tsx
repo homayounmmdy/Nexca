@@ -1,5 +1,5 @@
 import { SetStateAction } from "react";
-import Button from "../atoms/Button";
+import {Button} from '@nexca/ui';
 import ThemeIcon from "../atoms/ThemeIcon";
 
 const ThemeFiled = ({

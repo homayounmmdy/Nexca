@@ -1,5 +1,5 @@
 'use client';
-import { Button, Input } from '@/components/atoms';
+import { Button, Input } from '@nexca/ui';
 import { AUTH_KEY } from '@/config/Constants';
 import RouteConfig from '@/config/RouteConfig';
 import Link from 'next/link';

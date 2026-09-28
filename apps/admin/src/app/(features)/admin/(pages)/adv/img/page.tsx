@@ -5,7 +5,8 @@ import { CiEdit } from 'react-icons/ci';
 import useFetch from '@/hooks/useFetch';
 import { ALL_IMG_ADV_QUERY_KEY } from '@/config/Constants';
 import { IMG_ADV_API_URL } from '@/config/apiConstants';
-import { Spinner, Button, ErrorText } from '@/components/atoms';
+import { Spinner, ErrorText } from '@/components/atoms';
+import {Button} from '@nexca/ui'
 import { DeleteBtn } from '@/components/molecules';
 import RouteConfig from '@/config/RouteConfig';
 import { ImgAdvCashType } from '@/types/CashTypes';

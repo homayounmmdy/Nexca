@@ -1,4 +1,4 @@
-import { Input, Button } from '@/components/atoms';
+import { Input, Button } from '@nexca/ui';
 import { FiSearch, FiFilter } from 'react-icons/fi';
 
 interface SearchBarProps {

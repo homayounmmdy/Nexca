@@ -1,7 +1,7 @@
 'use client';
 import RecentPosts from '@/app/(pages)/posts/[id]/components/RecentPosts';
 import '@/app/tiptap.css';
-import { Container } from '@/components/atoms';
+import { Container } from'@nexca/ui';
 import { MainHead } from '@/components/molecules';
 import useSinglePost from '@/hooks/useSinglePost';
 import { SectionController } from '@/util/controller/sectionsController';

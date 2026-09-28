@@ -1,5 +1,5 @@
 'use client';
-import { Button, Input } from '@/components/atoms';
+import { Button, Input } from '@nexca/ui';
 import { useEmailForm } from '@/hooks/useEmailForm ';
 import { AllowedColors } from '@/types/AllowedOptions';
 import { Toaster } from 'react-hot-toast';

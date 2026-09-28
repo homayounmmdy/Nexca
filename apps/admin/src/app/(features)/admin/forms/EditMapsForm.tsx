@@ -1,6 +1,6 @@
 'use client';
 import { CountriesMapData } from '@/app/(features)/maps/data/countries';
-import { Button, Input, Textarea } from '@/components/atoms';
+import { Button, Input, Textarea } from '@nexca/ui';
 import { MAPS_API_URL } from '@/config/apiConstants';
 import { getProvinceData } from '@/config/getProvinceData';
 import { MapsCashType } from '@/types/CashTypes';

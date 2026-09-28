@@ -1,4 +1,4 @@
-import Input from '../../../../components/atoms/Input';
+import {Input} from '@nexca/ui';
 import Image from 'next/image';
 import { FaLink } from 'react-icons/fa';
 import React from 'react';

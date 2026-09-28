@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import React from 'react';
 import { PriceData } from '../data/PriceData';
 import PriceItem from './PriceItem';
-import { Container } from '@/components/atoms';
+import { Container } from '@nexca/ui';
 
 const PriceList = () => {
    const containerVariants = {

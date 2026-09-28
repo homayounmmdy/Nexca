@@ -1,4 +1,4 @@
-import { Button } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 
 interface Props {
    isOpen: boolean;

@@ -1,4 +1,4 @@
-import { Container } from "@/components/atoms";
+import { Container } from '@nexca/ui';
 import { PostItem } from "@/components/posts";
 
 function TemplatePage() {

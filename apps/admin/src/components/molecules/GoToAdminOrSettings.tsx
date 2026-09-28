@@ -5,7 +5,7 @@ import React from "react";
 import { FaHome } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import RouteConfig from "../../config/RouteConfig";
-import { Button } from "../atoms";
+import { Button } from'@nexca/ui';
 
 /**
  * A navigation toggle component that conditionally renders a link to either the admin dashboard

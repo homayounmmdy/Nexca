@@ -8,7 +8,7 @@ import {
    SiTailwindcss,
    SiVercel,
 } from 'react-icons/si';
-import { Button, Container } from '@/components/atoms';
+import { Button, Container } from '@nexca/ui';
 import { MainHead } from '@/components/molecules';
 
 export default function About() {

@@ -1,4 +1,4 @@
-import { Button } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 import toast from 'react-hot-toast';
 
 interface Props {

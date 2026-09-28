@@ -1,4 +1,5 @@
-import { Button, ErrorText } from '@/components/atoms';
+import {  ErrorText } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 import { DeleteBtn } from '@/components/molecules';
 import RouteConfig from '@/config/RouteConfig';
 import Link from 'next/link';

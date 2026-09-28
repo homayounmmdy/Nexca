@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Button } from "../atoms";
+import { Button } from '@nexca/ui';
 
 // Define BeforeInstallPromptEvent type (since it's not in TypeScript by default)
 interface BeforeInstallPromptEvent extends Event {

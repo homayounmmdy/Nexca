@@ -1,6 +1,6 @@
 'use client';
 import useCheckLogin from '@/app/(features)/admin/hooks/useCheckLogin';
-import { Button } from '@/components/atoms';
+import { Button } from '@nexca/ui';
 import { AUTH_KEY } from '@/config/Constants';
 import { useRouter } from 'next/navigation';
 import React from 'react';

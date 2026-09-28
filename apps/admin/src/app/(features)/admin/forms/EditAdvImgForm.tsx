@@ -1,5 +1,5 @@
 'use client';
-import { Button, Input } from '@/components/atoms';
+import { Button, Input } from '@nexca/ui';
 import { IMG_ADV_API_URL } from '@/config/apiConstants';
 import { ImgAdvCashType } from '@/types/CashTypes';
 import FormHandler from '@/util/handler/FormHandler';

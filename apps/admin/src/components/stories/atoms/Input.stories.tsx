@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Input } from '@/components/atoms';
+import { Input } from '@nexca/ui'
 import { FaRegMessage } from 'react-icons/fa6';
 
 const meta = {

@@ -1,5 +1,5 @@
 'use client';
-import { Container } from '@/components/atoms';
+import { Container } from '@nexca/ui';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import React, { useRef } from 'react';
 import { TechStackData } from '../data/TechStackData';

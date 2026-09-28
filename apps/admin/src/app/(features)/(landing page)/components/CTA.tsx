@@ -1,4 +1,4 @@
-import { Container } from '@/components/atoms';
+import { Container } from '@nexca/ui';
 import { CTABtn } from '@/components/molecules';
 import Image from 'next/image';
 

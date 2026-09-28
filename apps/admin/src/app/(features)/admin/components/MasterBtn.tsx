@@ -1,6 +1,6 @@
 import RouteConfig from '@/config/RouteConfig';
 import Link from 'next/link';
-import { Button } from '../../../../components/atoms';
+import { Button } from '@nexca/ui';
 
 interface Props {
    children: React.ReactNode;

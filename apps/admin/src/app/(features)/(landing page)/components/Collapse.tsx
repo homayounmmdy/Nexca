@@ -1,5 +1,5 @@
 'use client';
-import { Input } from '@/components/atoms';
+import { Input } from '@nexca/ui';
 import { CollapseType } from '@/types/entities';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import React from 'react';

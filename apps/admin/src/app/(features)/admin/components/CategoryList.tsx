@@ -1,4 +1,4 @@
-import { Button, Input } from '@/components/atoms';
+import { Button, Input } from '@nexca/ui';
 import { CategoryType } from '@/types/CashTypes';
 import React from 'react';
 import { MdDeleteOutline } from 'react-icons/md';
