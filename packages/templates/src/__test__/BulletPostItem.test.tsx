@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import PostsCash from "../cash";
-import BulletPost from "../components/BulletPostItem";
+import BulletPostItem from "../components/BulletPostItem";
 
 describe("BulletPost Component", () => {
   it("should have link with correct attributes", () => {
-    render(<BulletPost post={PostsCash[0]} />);
+    render(<BulletPostItem post={PostsCash[0]} />);
 
     const link = screen.getByTestId("link");
 
@@ -12,7 +12,7 @@ describe("BulletPost Component", () => {
     expect(link).toHaveAttribute("title");
   });
   it("should have bullet icon", () => {
-    render(<BulletPost post={PostsCash[0]} />);
+    render(<BulletPostItem post={PostsCash[0]} />);
 
     const link = screen.getByTestId("link-icon");
 
@@ -20,7 +20,7 @@ describe("BulletPost Component", () => {
     expect(link).toHaveAttribute("aria-label", "Bullet icon");
   });
   it("should have correct value", () => {
-    render(<BulletPost post={PostsCash[1]} />);
+    render(<BulletPostItem post={PostsCash[1]} />);
 
     expect(screen.getByText(PostsCash[1].title)).toBeInTheDocument();
   });

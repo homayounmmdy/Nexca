@@ -3,6 +3,7 @@ import type { StorybookConfig } from '@storybook/react-vite';
 import { dirname } from "path"
 
 import { fileURLToPath } from "url"
+import { mergeConfig } from "vite";
 
 /**
 * This function is used to resolve the absolute path of a package.
@@ -12,16 +13,24 @@ function getAbsolutePath(value: string) {
   return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)))
 }
 const config: StorybookConfig = {
-  "stories": [
+  stories: [
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  "addons": [
+  addons: [
     getAbsolutePath('@chromatic-com/storybook'),
     getAbsolutePath('@storybook/addon-vitest'),
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/addon-docs')
   ],
-  "framework": getAbsolutePath('@storybook/react-vite')
+  framework: getAbsolutePath('@storybook/react-vite'),
+   async viteFinal(config) {
+    return mergeConfig(config, {
+      define: {
+        'process.env': {},
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV ?? 'development'),
+      },
+    });
+  },
 };
 export default config;

@@ -3,10 +3,10 @@ import { FaCircleDot } from "react-icons/fa6";
 import { PostsCashType } from "../types";
 import { postLinkGenerator } from "../utils";
 
-const BulletPost = ({ post }: { post: PostsCashType }) => {
+const BulletPostItem = ({ post }: { post: PostsCashType }) => {
   const postLink = postLinkGenerator(post._id, post.title);
   return (
-    <li className="group flex cursor-pointer items-start gap-2 rounded-xl border-2 border-dotted border-gray-400 p-2 hover:border-solid hover:border-gray-900">
+    <li className="group text-base-100 flex cursor-pointer items-start gap-2 rounded-xl border-2 border-dotted border-gray-400 p-2 hover:border-solid hover:border-gray-900">
       <div className="h-7 w-7 shrink-0">
         <FaCircleDot
           className="h-full w-full text-indigo-700"
@@ -28,4 +28,4 @@ const BulletPost = ({ post }: { post: PostsCashType }) => {
   );
 };
 
-export default BulletPost;
+export default BulletPostItem;
