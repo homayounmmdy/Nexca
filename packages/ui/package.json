@@ -23,6 +23,7 @@
     "@vitejs/plugin-react": "^4.7.0",
     "@vitest/browser": "^2.1.9",
     "@vitest/coverage-v8": "^2.1.9",
+    "daisyui": "^5.7.46",
     "eslint-plugin-storybook": "^10.6.0",
     "jsdom": "^24.1.3",
     "playwright": "latest",
@@ -36,5 +37,11 @@
   },
   "peerDependencies": {
     "next": "16.2.9"
+  },
+  "dependencies": {
+    "@storybook/react": "^10.6.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3"
   }
 }
