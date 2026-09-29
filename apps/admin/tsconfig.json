@@ -32,6 +32,6 @@
     "**/*.mts",
     "../../packages/config/site-config.ts",
     "../../packages/config/site.test.tsx"
-  ],
+, "../../packages/ui/src/stories/Container.stories.tsx"  ],
   "exclude": ["node_modules"]
 }

@@ -1,8 +1,9 @@
+import '../styles.css'
 import type { Meta, StoryObj } from '@storybook/react';
-import { Container } from '@/components/atoms';
+import { Container } from '@nexca/ui';
 
 const meta = {
-   title: 'Components/Atom/Container',
+   title: 'Container',
    component: Container,
    tags: ['autodocs'],
    args: {

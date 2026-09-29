@@ -1,9 +1,10 @@
+import '../styles.css'
 import type { Meta, StoryObj } from '@storybook/react';
 import { Input } from '@nexca/ui'
 import { FaRegMessage } from 'react-icons/fa6';
 
 const meta = {
-   title: 'Components/Atom/Input',
+   title: 'Input',
    component: Input,
    tags: ['autodocs'],
    args: {

@@ -1,9 +1,10 @@
+import '../styles.css'
 import { Textarea } from "@nexca/ui";
 import type { Meta, StoryObj } from "@storybook/react";
 import { FaRegMessage } from "react-icons/fa6";
 
 const meta = {
-  title: "Components/Atom/Textarea",
+  title: "Textarea",
   component: Textarea,
   tags: ["autodocs"],
   args: {
